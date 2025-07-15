@@ -18,14 +18,11 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 
 ## Screenshots
 
-<img src="[https://github.com/user-attachments/assets/cbff81f6-e77e-47bb-9a35-1d7adf69e442](https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/download-vimeo-videos-private-or-public-with-browser-extension.jpg)" alt="vimeo video downloader 1" width="800" />
+<img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/download-vimeo-videos-private-or-public-with-browser-extension.jpg" alt="vimeo video downloader 1" width="800" />
 
 ## Videos
 
-<a href="https://www.youtube.com/watch?v=jKf8VqvLGqQ" target="_blank">
-<img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/easily-download-skool-videos-free-chrome-extension-1752429029672.jpg" width="700px">
-</a>
-
+** add these
 
 ---
 
