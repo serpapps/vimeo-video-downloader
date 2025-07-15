@@ -8,13 +8,23 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 
 ---
 
-## Features
+## Live & Planned Features
 
-- Download vimeo videos from any web page page
-- 100% privacy-friendly – no tracking or data collection
-- Auto-detect videos on the page
-- Floating download button
-- 1-on-1 support via our community
+- Works Everywhere
+- Privacy Focus
+- Auto-detect Videos
+- Smart Page Scan
+- Embedded Video Support
+- Full HD Downloads
+- Community Support
+- Bug Reporting
+- Zeo Ads
+- Regular Updates
+- Thumbnail Preview
+- Minimal Permissions
+- Download Progress Bar
+- Batch Video Detection
+
 
 ## Screenshots
 
