@@ -47,7 +47,7 @@ And that turned into requests for simpler solutions, more features, etc. So here
 - Full HD Downloads
 - Community Support
 - Bug Reporting
-- Zeo Ads
+- Zero Ads
 - Regular Updates
 - Thumbnail Preview
 - Minimal Permissions
