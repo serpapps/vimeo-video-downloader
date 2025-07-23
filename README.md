@@ -53,14 +53,6 @@ And that turned into requests for simpler solutions, more features, etc. So here
 - Platforms that don’t let you organize lessons
 - Courses with good content but terrible video naming
 
-
-## Videos
-
-** add these
-
-
-
-
 ## Live & Planned Features
 
 - Works Everywhere
@@ -106,3 +98,25 @@ And that turned into requests for simpler solutions, more features, etc. So here
 - **Vimeo Output**: H.264/H.265 + AAC (Mac-native formats)
 - **Stream Copy**: Preserves original quality and compatibility
 - **Container**: MP4 with FastStart for web playback
+
+
+---
+
+<details>
+
+<summary>More videos</summary>
+
+# How to Download Vimeo Videos for Free (Mac & Windows) | No Extensions/Tools Needed (MAC VERSION)
+
+<a href="https://www.youtube.com/watch?v=MeLNJSwCnwk" target="_blank">
+<img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/how-to-download-vimeo-videos-for-free-mac-windows-no-extensionstools-needed-mac-version.jpg" width="700px">
+</a>
+
+# How to Download Vimeo Videos for Free (Mac & Windows) | No Extensions/Tools Needed (WINDOWS VERSION)
+
+<a href="https://www.youtube.com/watch?v=ZnoC6IZg4s4" target="_blank">
+<img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/how-to-download-vimeo-videos-for-free-mac-windows-no-extensionstools-needed-windows-version.jpg" width="700px">
+</a>
+
+
+</details>
