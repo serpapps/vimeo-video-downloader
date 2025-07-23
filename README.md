@@ -2,13 +2,36 @@
 
 Download Vimeo videos to your computer for offline watching from any webpage with this browser extension.
 
+## 🔗 Links
+
 - 🎁 Get it [here](https://serp.ly/stuff/vimeo-video-downloader)
 - ❓ Check FAQs [here](https://github.com/orgs/serpapps/discussions/categories/faq)
 - 🆘 Ask questions [here](https://serp.ly/@serp/community)
 - 🐛 Report bugs [here](https://github.com/serpapps/vimeo-video-downloader/issues)
 - 🆕 Request features [here](https://github.com/serpapps/vimeo-video-downloader/issues)
 
----
+
+### Resources
+
+- 💬 [SERP University - Community](https://serp.ly/@serp/community)
+- 💌 [Newsletter](https://serp.ly/@serp/email)
+- 🛒 [Shop](https://serp.ly/@serp/store)
+- 🎓 [Courses](https://serp.ly/@serp/courses)
+
+
+## Table of Contents
+
+- [Screenshots](#screenshots)
+- [Why did we make this](#why-did-we-make-this)
+- [Videos](#videos)
+- [Live \& Planned Features](#live--planned-features)
+- [Installation Instructions](#installation-instructions)
+- [Platform Compatibility](#platform-compatibility)
+  - [✅ Mac ARM (Apple Silicon)](#-mac-arm-apple-silicon)
+  - [✅ Intel Mac/Windows/Linux](#-intel-macwindowslinux)
+  - [Video Codec Compatibility](#video-codec-compatibility)
+
+
 
 
 ## Screenshots
@@ -55,3 +78,32 @@ And that turned into requests for simpler solutions, more features, etc. So here
 - Minimal Permissions
 - Download Progress Bar
 - Batch Video Detection
+
+
+## Installation Instructions
+
+### From GitHub Releases (Recommended)
+1. Download the latest `.zip` file from [Releases](https://github.com/serpapps/vimeo-video-downloader/releases)
+2. Extract the ZIP file
+3. Open Chrome/Edge and go to `chrome://extensions/`
+4. Enable "Developer mode" (top right toggle)
+5. Click "Load unpacked" and select the extracted folder
+6. When you click on the extension for the first time, you will need to enter your `email` & `license key` associated with the extension
+> Note: You can find your license key in your email confirmation from purchasing the product
+
+
+## Platform Compatibility
+
+### ✅ Mac ARM (Apple Silicon)
+- WebAssembly is architecture-agnostic
+- FFmpeg.wasm works natively
+- Proper initialization resolves FS errors
+
+### ✅ Intel Mac/Windows/Linux  
+- Standard Chrome extension compatibility
+- FFmpeg.wasm universal support
+
+### Video Codec Compatibility
+- **Vimeo Output**: H.264/H.265 + AAC (Mac-native formats)
+- **Stream Copy**: Preserves original quality and compatibility
+- **Container**: MP4 with FastStart for web playback
