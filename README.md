@@ -2,6 +2,11 @@
 
 Download Vimeo videos to your computer for offline watching from any webpage with this browser extension.
 
+
+<a href="https://www.youtube.com/watch?v=-_zu7XgFuKs" target="_blank">
+<img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/download-any-vimeo-video-easily-on-public-or-private-web-pages-vimeo-video-downloader-v200.jpg" width="900px">
+</a>
+
 ## 🔗 Links
 
 - 🎁 Get it [here](https://serp.ly/stuff/vimeo-video-downloader)
@@ -31,12 +36,6 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
   - [✅ Intel Mac/Windows/Linux](#-intel-macwindowslinux)
   - [Video Codec Compatibility](#video-codec-compatibility)
 
-
-
-
-## Screenshots
-
-<img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/download-vimeo-videos-private-or-public-with-browser-extension.jpg" alt="vimeo video downloader 1" width="800" />
 
 ## Why did we make this
 
