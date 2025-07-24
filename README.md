@@ -92,36 +92,6 @@ And that turned into requests for simpler solutions, more features, etc. So here
 7. When you click on the extension for the first time, you will need to enter your `email` & `license key` associated with the extension
 > Note: You can find your license key in your email confirmation from purchasing the product
 
-## Platform Compatibility
-
-### ✅ Mac ARM (Apple Silicon)
-- WebAssembly is architecture-agnostic
-- FFmpeg.wasm works natively
-- Proper initialization resolves FS errors
-
-### ✅ Intel Mac/Windows/Linux  
-- Standard Chrome extension compatibility
-- FFmpeg.wasm universal support
-
-### Video Codec Compatibility
-- **Vimeo Output**: H.264/H.265 + AAC (Mac-native formats)
-- **Stream Copy**: Preserves original quality and compatibility
-- **Container**: MP4 with FastStart for web playback
-
-## Value Proposition
-
-- **Speed**: Fastest download speeds with direct server connections
-- **Quality**: Maintains original video quality without compression
-- **Simplicity**: No technical knowledge required - paste URL and download
-- **Privacy**: No account needed, no data tracking
-
-## Differentiation
-
-- Unlike browser extensions that can be unreliable
-- No annoying ads or pop-ups
-- Supports all Vimeo video formats
-- Batch download capabilities (if applicable)
-
 ---
 
 <details>
