@@ -2,7 +2,6 @@
 
 Download Vimeo videos to your computer for offline watching from any webpage with this browser extension.
 
-
 <a href="https://www.youtube.com/watch?v=-_zu7XgFuKs" target="_blank">
 <img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/download-any-vimeo-video-easily-on-public-or-private-web-pages-vimeo-video-downloader-v200.jpg" width="900px">
 </a>
@@ -15,14 +14,12 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 - 🐛 Report bugs [here](https://github.com/serpapps/vimeo-video-downloader/issues)
 - 🆕 Request features [here](https://github.com/serpapps/vimeo-video-downloader/issues)
 
-
 ### Resources
 
 - 💬 [SERP University - Community](https://serp.ly/@serp/community)
 - 💌 [Newsletter](https://serp.ly/@serp/email)
 - 🛒 [Shop](https://serp.ly/@serp/store)
 - 🎓 [Courses](https://serp.ly/@serp/courses)
-
 
 ## Table of Contents
 
@@ -35,7 +32,6 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
   - [✅ Mac ARM (Apple Silicon)](#-mac-arm-apple-silicon)
   - [✅ Intel Mac/Windows/Linux](#-intel-macwindowslinux)
   - [Video Codec Compatibility](#video-codec-compatibility)
-
 
 ## Why did we make this
 
@@ -50,8 +46,23 @@ And that turned into requests for simpler solutions, more features, etc. So here
 - Videos buffer, freeze or fail on slow internet
 - Private video links expire without warning
 - Need to rewatch videos offline but there's no download button
-- Platforms that don’t let you organize lessons
+- Platforms that don't let you organize lessons
 - Courses with good content but terrible video naming
+
+## What makes it special
+
+- ⚡ Lightning fast downloads (no re-encoding)
+- 🎯 Original quality preserved (up to 4K)
+- 🔒 No registration or personal data required
+- 🚫 No watermarks or branding added
+- 📱 Works on all devices
+
+## Perfect for
+
+- Content creators backing up their portfolio
+- Educators saving lectures and tutorials
+- Professionals downloading training materials
+- Anyone wanting offline access to their favorite videos
 
 ## Live & Planned Features
 
@@ -70,7 +81,6 @@ And that turned into requests for simpler solutions, more features, etc. So here
 - Download Progress Bar
 - Batch Video Detection
 
-
 ## Installation Instructions
 
 1. "Star ⭐" this repository <a href="https://public-files.gumroad.com/fgqglcvq4v0u32yc0x0jvsllk4x6" target="_blank">click the button that looks like this</a>
@@ -81,7 +91,6 @@ And that turned into requests for simpler solutions, more features, etc. So here
 6. Click "Load unpacked" (top left button) and select the extracted folder
 7. When you click on the extension for the first time, you will need to enter your `email` & `license key` associated with the extension
 > Note: You can find your license key in your email confirmation from purchasing the product
-
 
 ## Platform Compatibility
 
@@ -99,6 +108,19 @@ And that turned into requests for simpler solutions, more features, etc. So here
 - **Stream Copy**: Preserves original quality and compatibility
 - **Container**: MP4 with FastStart for web playback
 
+## Value Proposition
+
+- **Speed**: Fastest download speeds with direct server connections
+- **Quality**: Maintains original video quality without compression
+- **Simplicity**: No technical knowledge required - paste URL and download
+- **Privacy**: No account needed, no data tracking
+
+## Differentiation
+
+- Unlike browser extensions that can be unreliable
+- No annoying ads or pop-ups
+- Supports all Vimeo video formats
+- Batch download capabilities (if applicable)
 
 ---
 
@@ -117,6 +139,5 @@ And that turned into requests for simpler solutions, more features, etc. So here
 <a href="https://www.youtube.com/watch?v=ZnoC6IZg4s4" target="_blank">
 <img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/how-to-download-vimeo-videos-for-free-mac-windows-no-extensionstools-needed-windows-version.jpg" width="700px">
 </a>
-
 
 </details>
