@@ -34,14 +34,8 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
   - [✅ Intel Mac/Windows/Linux](#-intel-macwindowslinux)
   - [Video Codec Compatibility](#video-codec-compatibility)
 
-## Why did we make this
 
-Well, we made it for ourselves at first.
-When we found some solutions to our problems we made a few Youtube videos about them.
-And then we found out that other people felt the same way about certain video watching experiences.
-And that turned into requests for simpler solutions, more features, etc. So here we are.
-
-**If you've been frustrated with any of these, then we made it for you too:**
+## If you've been frustrated with any of these, then we made it for you too
 
 - Paid courses disappear before you finish them
 - Videos buffer, freeze or fail on slow internet
