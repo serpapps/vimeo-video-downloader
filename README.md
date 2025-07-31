@@ -50,7 +50,6 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 - 🎯 Original quality preserved (up to 4K)
 - 🔒 No registration or personal data required
 - 🚫 No watermarks or branding added
-- 📱 Works on all devices
 
 ## Perfect for
 
@@ -74,7 +73,6 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 - Thumbnail Preview
 - Minimal Permissions
 - Download Progress Bar
-- Batch Video Detection
 
 ## Installation Instructions
 
