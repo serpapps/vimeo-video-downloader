@@ -2,6 +2,10 @@
 
 Download Vimeo videos to your computer for offline watching from any webpage with this browser extension.
 
+- Lightning fast downloads (no re-encoding)
+- Original quality preserved (up to 4K)
+- No registration or personal data required
+- No watermarks or branding added
 
 <a href="https://www.youtube.com/watch?v=-_zu7XgFuKs" target="_blank">
 <img src="https://github.com/user-attachments/assets/428ebb22-950e-4aaf-a9b0-065313273b48" width="900px">
@@ -22,19 +26,12 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 - 🎓 [Courses](https://serp.ly/@serp/courses)
 
 ## Table of Contents
-
-- [Screenshots](#screenshots)
-- [Why did we make this](#why-did-we-make-this)
-- [Videos](#videos)
+- [Solving these problems](#solving-these-problems)
+- [Perfect for](#perfect-for)
 - [Live \& Planned Features](#live--planned-features)
 - [Installation Instructions](#installation-instructions)
-- [Platform Compatibility](#platform-compatibility)
-  - [✅ Mac ARM (Apple Silicon)](#-mac-arm-apple-silicon)
-  - [✅ Intel Mac/Windows/Linux](#-intel-macwindowslinux)
-  - [Video Codec Compatibility](#video-codec-compatibility)
 
-
-## If you've been frustrated with any of these, then we made it for you too
+## Solving these problems
 
 - Paid courses disappear before you finish them
 - Videos buffer, freeze or fail on slow internet
@@ -42,13 +39,6 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 - Need to rewatch videos offline but there's no download button
 - Platforms that don't let you organize lessons
 - Courses with good content but terrible video naming
-
-## What makes it special
-
-- ⚡ Lightning fast downloads (no re-encoding)
-- 🎯 Original quality preserved (up to 4K)
-- 🔒 No registration or personal data required
-- 🚫 No watermarks or branding added
 
 ## Perfect for
 
