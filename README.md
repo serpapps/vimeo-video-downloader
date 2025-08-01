@@ -86,6 +86,7 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 5. Enable "Developer mode" (top right toggle)
 6. Click "Load unpacked" (top left button) and select the extracted folder
 7. When you click on the extension for the first time, you will need to enter your `email` & `license key` associated with the extension
+
 > Note: You can find your license key in your email confirmation from purchasing the product
 
 ---
