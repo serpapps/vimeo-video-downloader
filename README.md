@@ -2,9 +2,9 @@
 
 Download Vimeo videos to your computer for offline watching from any webpage with this browser extension.
 
-- Lightning fast downloads (no re-encoding)
+- Fast downloads (no re-encoding)
 - Original quality preserved (up to 4K)
-- No registration or personal data required
+- No data tracking
 - No watermarks or branding added
 
 <a href="https://www.youtube.com/watch?v=-_zu7XgFuKs" target="_blank">
