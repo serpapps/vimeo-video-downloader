@@ -13,7 +13,7 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 
 ## 🔗 Links
 
-- 🎁 Get it [here](https://serp.ly/stuff/vimeo-video-downloader)
+- 🎁 Get it [here](https://serp.ly/vimeo-video-downloader)
 - ❓ Check FAQs [here](https://github.com/orgs/serpapps/discussions/categories/faq)
 - 🐛 Report bugs [here](https://github.com/serpapps/vimeo-video-downloader/issues)
 - 🆕 Request features [here](https://github.com/serpapps/vimeo-video-downloader/issues)
