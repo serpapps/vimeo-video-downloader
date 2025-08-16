@@ -1,0 +1,23 @@
+{
+  "name": "extension-metadata-tools",
+  "version": "1.0.0",
+  "description": "Tools for validating and working with browser extension metadata schema",
+  "main": "validate.js",
+  "scripts": {
+    "validate": "node validate.js",
+    "generate-readme": "node generate-readme.js",
+    "test": "npm run validate"
+  },
+  "devDependencies": {
+    "ajv": "^8.0.0",
+    "ajv-formats": "^2.0.0"
+  },
+  "keywords": [
+    "browser-extension",
+    "metadata",
+    "schema",
+    "validation"
+  ],
+  "author": "SERP Apps",
+  "license": "MIT"
+}

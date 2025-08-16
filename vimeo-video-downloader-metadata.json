@@ -1,0 +1,217 @@
+{
+  "title": "Vimeo Video Downloader (Browser Extension)",
+  "tagline": "Download Vimeo videos to your computer for offline watching from any webpage with this browser extension.",
+  "description": {
+    "short": [
+      "Fast downloads (no re-encoding)",
+      "Original quality preserved (up to 4K)",
+      "No data tracking",
+      "No watermarks or branding added"
+    ],
+    "problems_solved": [
+      "Paid courses disappear before you finish them",
+      "Videos buffer, freeze or fail on slow internet",
+      "Private video links expire without warning",
+      "Need to rewatch videos offline but there's no download button",
+      "Platforms that don't let you organize lessons",
+      "Courses with good content but terrible video naming"
+    ],
+    "target_audience": [
+      "Content creators backing up their portfolio",
+      "Educators saving lectures and tutorials",
+      "Professionals downloading training materials",
+      "Anyone wanting offline access to their favorite videos"
+    ]
+  },
+  "version": {
+    "current": "v2.0.1",
+    "release_notes_url": "https://github.com/serpapps/vimeo-video-downloader/releases"
+  },
+  "links": {
+    "purchase": "https://serp.ly/vimeo-video-downloader",
+    "repository": "https://github.com/serpapps/vimeo-video-downloader",
+    "releases": "https://github.com/serpapps/vimeo-video-downloader/releases",
+    "issues": "https://github.com/serpapps/vimeo-video-downloader/issues",
+    "faq": "https://github.com/orgs/serpapps/discussions/categories/faq",
+    "community": "https://serp.ly/@serp/community",
+    "support": {
+      "newsletter": "https://serp.ly/@serp/email",
+      "shop": "https://serp.ly/@serp/store",
+      "courses": "https://serp.ly/@serp/courses"
+    }
+  },
+  "media": {
+    "screenshots": [
+      {
+        "url": "https://github.com/user-attachments/assets/884674e0-dfcb-4dc1-a0d3-fa29df51d55e",
+        "alt": "Vimeo Video Downloader Screenshot 1",
+        "caption": "Main extension interface"
+      },
+      {
+        "url": "https://github.com/user-attachments/assets/8a317739-816a-446f-95d2-bd8b5aec63cc",
+        "alt": "Vimeo Video Downloader Screenshot 2",
+        "caption": "Download progress interface"
+      },
+      {
+        "url": "https://github.com/user-attachments/assets/46c7dcda-c6a9-4036-895b-f34fb3c8f857",
+        "alt": "Vimeo Video Downloader Screenshot 3",
+        "caption": "Video quality selection"
+      },
+      {
+        "url": "https://github.com/user-attachments/assets/6040ffdf-1f96-4d92-85c4-84474b769642",
+        "alt": "Vimeo Video Downloader Screenshot 4",
+        "caption": "Settings and configuration"
+      },
+      {
+        "url": "https://github.com/user-attachments/assets/fd7c71a8-7ec1-44f3-9522-c214f3667dc9",
+        "alt": "Vimeo Video Downloader Screenshot 5",
+        "caption": "Download completion status"
+      }
+    ],
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=-_zu7XgFuKs",
+        "title": "Vimeo Video Downloader Demo",
+        "description": "Demonstration of the Vimeo Video Downloader browser extension",
+        "thumbnail": "https://github.com/user-attachments/assets/428ebb22-950e-4aaf-a9b0-065313273b48",
+        "type": "demo",
+        "platform": "youtube"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=MeLNJSwCnwk",
+        "title": "How to Download Vimeo Videos for Free (Mac & Windows) | No Extensions/Tools Needed (MAC VERSION)",
+        "description": "Tutorial for downloading Vimeo videos on Mac without extensions",
+        "thumbnail": "https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/how-to-download-vimeo-videos-for-free-mac-windows-no-extensionstools-needed-mac-version.jpg",
+        "type": "tutorial",
+        "platform": "youtube"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=ZnoC6IZg4s4",
+        "title": "How to Download Vimeo Videos for Free (Mac & Windows) | No Extensions/Tools Needed (WINDOWS VERSION)",
+        "description": "Tutorial for downloading Vimeo videos on Windows without extensions",
+        "thumbnail": "https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/how-to-download-vimeo-videos-for-free-mac-windows-no-extensionstools-needed-windows-version.jpg",
+        "type": "tutorial",
+        "platform": "youtube"
+      }
+    ]
+  },
+  "features": {
+    "live": [
+      "Works Everywhere",
+      "Privacy Focus",
+      "Auto-detect Videos",
+      "Smart Page Scan",
+      "Embedded Video Support",
+      "Full HD Downloads",
+      "Community Support",
+      "Bug Reporting",
+      "Zero Ads",
+      "Regular Updates",
+      "Thumbnail Preview",
+      "Minimal Permissions",
+      "Download Progress Bar"
+    ],
+    "highlights": [
+      "Fast downloads (no re-encoding)",
+      "Original quality preserved (up to 4K)",
+      "No data tracking",
+      "No watermarks or branding added"
+    ]
+  },
+  "compatibility": {
+    "operating_systems": ["Windows", "macOS"],
+    "browsers": [
+      {
+        "name": "Chrome",
+        "tested_version": "Latest"
+      },
+      {
+        "name": "Firefox",
+        "tested_version": "Latest"
+      },
+      {
+        "name": "Safari",
+        "tested_version": "Latest"
+      },
+      {
+        "name": "Edge",
+        "tested_version": "Latest"
+      }
+    ],
+    "media_types": [
+      "Standard Vimeo videos",
+      "Player embed videos",
+      "Channel videos",
+      "Videos with subtitles",
+      "Password protected videos",
+      "Unlisted videos",
+      "On Demand videos",
+      "Review page videos",
+      "Third party embeds"
+    ],
+    "download_targets": [
+      {
+        "format": "MP4",
+        "max_quality": "4K"
+      }
+    ]
+  },
+  "installation": {
+    "type": "manual",
+    "steps": [
+      "\"Star ⭐\" this repository",
+      "Download the latest `.zip` file from Releases",
+      "Extract the ZIP file (aka double click it)",
+      "Open Chrome and go to `chrome://extensions/`",
+      "Enable \"Developer mode\" (top right toggle)",
+      "Click \"Load unpacked\" (top left button) and select the extracted folder",
+      "When you click on the extension for the first time, you will need to enter your `email` & `license key` associated with the extension"
+    ],
+    "requirements": [
+      "Browser with developer mode support",
+      "Valid email and license key"
+    ],
+    "download_url": "https://github.com/serpapps/vimeo-video-downloader/releases/download/v2.0.1/vimeo-downloader.zip",
+    "file_format": ".zip",
+    "license_required": true,
+    "authentication": {
+      "email_required": true,
+      "license_key_required": true,
+      "account_required": false
+    }
+  },
+  "permissions": [
+    "Minimal Permissions"
+  ],
+  "pricing": {
+    "model": "paid",
+    "currency": "USD",
+    "trial_available": false
+  },
+  "keywords": [
+    "vimeo downloader",
+    "vimeo video downloader",
+    "how to download vimeo videos",
+    "vimeo downloader chrome",
+    "download vimeo private video",
+    "vimeo downloader online",
+    "download vimeo to mp4",
+    "free vimeo downloader",
+    "download vimeo transcript",
+    "download vimeo video from link",
+    "simple vimeo downloader"
+  ],
+  "categories": [
+    "Tools",
+    "Media",
+    "Productivity"
+  ],
+  "developer": {
+    "name": "SERP Apps",
+    "url": "https://serp.ly/@serp/store"
+  },
+  "metadata": {
+    "last_updated": "2025-08-03T14:23:08Z",
+    "schema_version": "1.0.0"
+  }
+}

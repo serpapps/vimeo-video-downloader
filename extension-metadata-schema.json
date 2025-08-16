@@ -1,0 +1,451 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://serpapps.github.io/schemas/extension-metadata.json",
+  "title": "Browser Extension Metadata Schema",
+  "description": "Standardized schema for browser extension metadata including title, links, media, features, compatibility, and installation information",
+  "type": "object",
+  "required": [
+    "title",
+    "description",
+    "version",
+    "links",
+    "compatibility"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The full title of the browser extension",
+      "examples": ["Vimeo Video Downloader (Browser Extension)"]
+    },
+    "tagline": {
+      "type": "string",
+      "description": "Short descriptive tagline for the extension",
+      "examples": ["Download Vimeo videos to your computer for offline watching from any webpage with this browser extension."]
+    },
+    "description": {
+      "type": "object",
+      "description": "Detailed description information",
+      "properties": {
+        "short": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Short bullet points describing key features",
+          "examples": [["Fast downloads (no re-encoding)", "Original quality preserved (up to 4K)", "No data tracking", "No watermarks or branding added"]]
+        },
+        "problems_solved": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of problems this extension solves"
+        },
+        "target_audience": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Who this extension is perfect for"
+        }
+      },
+      "required": ["short"]
+    },
+    "version": {
+      "type": "object",
+      "description": "Version information",
+      "properties": {
+        "current": {
+          "type": "string",
+          "pattern": "^v?\\d+\\.\\d+\\.\\d+",
+          "description": "Current version number",
+          "examples": ["v2.0.1", "2.0.1"]
+        },
+        "release_notes_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to release notes or changelog"
+        }
+      },
+      "required": ["current"]
+    },
+    "links": {
+      "type": "object",
+      "description": "Important links related to the extension",
+      "properties": {
+        "purchase": {
+          "type": "string",
+          "format": "uri",
+          "description": "Primary purchase/download link"
+        },
+        "repository": {
+          "type": "string",
+          "format": "uri",
+          "description": "Source code repository URL"
+        },
+        "releases": {
+          "type": "string",
+          "format": "uri",
+          "description": "Releases page URL"
+        },
+        "issues": {
+          "type": "string",
+          "format": "uri",
+          "description": "Bug reports and feature requests URL"
+        },
+        "faq": {
+          "type": "string",
+          "format": "uri",
+          "description": "Frequently asked questions URL"
+        },
+        "community": {
+          "type": "string",
+          "format": "uri",
+          "description": "Community discussion URL"
+        },
+        "support": {
+          "type": "object",
+          "description": "Support and resource links",
+          "properties": {
+            "newsletter": {
+              "type": "string",
+              "format": "uri"
+            },
+            "shop": {
+              "type": "string",
+              "format": "uri"
+            },
+            "courses": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      },
+      "required": ["purchase", "repository"]
+    },
+    "media": {
+      "type": "object",
+      "description": "Media assets for the extension",
+      "properties": {
+        "screenshots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "Screenshot image URL"
+              },
+              "alt": {
+                "type": "string",
+                "description": "Alt text for the screenshot"
+              },
+              "caption": {
+                "type": "string",
+                "description": "Optional caption for the screenshot"
+              }
+            },
+            "required": ["url", "alt"]
+          },
+          "description": "Array of screenshot objects"
+        },
+        "videos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "Video URL"
+              },
+              "title": {
+                "type": "string",
+                "description": "Video title"
+              },
+              "description": {
+                "type": "string",
+                "description": "Video description"
+              },
+              "thumbnail": {
+                "type": "string",
+                "format": "uri",
+                "description": "Video thumbnail URL"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["demo", "tutorial", "promo", "installation"],
+                "description": "Type of video content"
+              },
+              "platform": {
+                "type": "string",
+                "enum": ["youtube", "vimeo", "other"],
+                "description": "Video hosting platform"
+              }
+            },
+            "required": ["url", "title", "type"]
+          },
+          "description": "Array of video objects"
+        },
+        "logo": {
+          "type": "string",
+          "format": "uri",
+          "description": "Extension logo URL"
+        },
+        "icon": {
+          "type": "string",
+          "format": "uri",
+          "description": "Extension icon URL"
+        }
+      }
+    },
+    "features": {
+      "type": "object",
+      "description": "Feature information",
+      "properties": {
+        "live": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Currently available features"
+        },
+        "planned": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Planned future features"
+        },
+        "highlights": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Key feature highlights"
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "description": "Compatibility information",
+      "properties": {
+        "operating_systems": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["Windows", "macOS", "Linux", "Chrome OS"]
+          },
+          "description": "Supported operating systems"
+        },
+        "browsers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "enum": ["Chrome", "Firefox", "Safari", "Edge", "Opera"]
+              },
+              "min_version": {
+                "type": "string",
+                "description": "Minimum supported version"
+              },
+              "tested_version": {
+                "type": "string",
+                "description": "Latest tested version"
+              }
+            },
+            "required": ["name"]
+          },
+          "description": "Supported browsers"
+        },
+        "media_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Supported media types or platforms",
+          "examples": [["Vimeo videos", "Embedded videos", "Private videos"]]
+        },
+        "download_targets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "format": {
+                "type": "string",
+                "examples": ["MP4", "WebM", "MOV"]
+              },
+              "quality": {
+                "type": "string",
+                "examples": ["4K", "1080p", "720p", "480p"]
+              },
+              "max_quality": {
+                "type": "string",
+                "description": "Maximum supported quality"
+              }
+            },
+            "required": ["format"]
+          },
+          "description": "Supported download formats and qualities"
+        }
+      },
+      "required": ["operating_systems", "browsers"]
+    },
+    "installation": {
+      "type": "object",
+      "description": "Installation information",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["manual", "store", "sideload"],
+          "description": "Installation method type"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Step-by-step installation instructions"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Installation requirements"
+        },
+        "download_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Direct download URL for the extension package"
+        },
+        "file_format": {
+          "type": "string",
+          "examples": [".zip", ".crx", ".xpi"],
+          "description": "Extension package file format"
+        },
+        "license_required": {
+          "type": "boolean",
+          "description": "Whether a license key is required"
+        },
+        "authentication": {
+          "type": "object",
+          "description": "Authentication requirements",
+          "properties": {
+            "email_required": {
+              "type": "boolean"
+            },
+            "license_key_required": {
+              "type": "boolean"
+            },
+            "account_required": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Browser permissions required by the extension"
+    },
+    "pricing": {
+      "type": "object",
+      "description": "Pricing information",
+      "properties": {
+        "model": {
+          "type": "string",
+          "enum": ["free", "paid", "freemium", "subscription"],
+          "description": "Pricing model"
+        },
+        "price": {
+          "type": "number",
+          "description": "Price in USD"
+        },
+        "currency": {
+          "type": "string",
+          "default": "USD",
+          "description": "Currency code"
+        },
+        "trial_available": {
+          "type": "boolean",
+          "description": "Whether a free trial is available"
+        }
+      }
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "SEO and search keywords"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Productivity",
+          "Tools",
+          "Entertainment",
+          "Education",
+          "Shopping",
+          "Social",
+          "News",
+          "Developer Tools",
+          "Communication",
+          "Media"
+        ]
+      },
+      "description": "Extension categories"
+    },
+    "developer": {
+      "type": "object",
+      "description": "Developer information",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Developer or organization name"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Developer website URL"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Developer contact email"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata",
+      "properties": {
+        "created_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Extension creation date"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last update timestamp"
+        },
+        "schema_version": {
+          "type": "string",
+          "description": "Version of this metadata schema",
+          "default": "1.0.0"
+        }
+      }
+    }
+  }
+}
