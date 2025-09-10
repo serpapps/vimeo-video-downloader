@@ -14,6 +14,7 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 ## 🔗 Links
 
 - 🎁 Get it [here](https://serp.ly/vimeo-video-downloader)
+- 🔒 View [Permissions Justification](PERMISSIONS.md)
 - ❓ Check FAQs [here](https://github.com/orgs/serpapps/discussions/categories/faq)
 - 🐛 Report bugs [here](https://github.com/serpapps/vimeo-video-downloader/issues)
 - 🆕 Request features [here](https://github.com/serpapps/vimeo-video-downloader/issues)
@@ -29,6 +30,7 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 - [Solving these problems](#solving-these-problems)
 - [Perfect for](#perfect-for)
 - [Live \& Planned Features](#live--planned-features)
+- [Permissions \& Privacy](#permissions--privacy)
 - [Installation Instructions](#installation-instructions)
 
 ## Solving these problems
@@ -62,6 +64,19 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 - Thumbnail Preview
 - Minimal Permissions
 - Download Progress Bar
+
+## Permissions & Privacy
+
+We believe in transparency and minimal permissions. Our extension only requests the permissions absolutely necessary for core functionality:
+
+- **Privacy First**: No data tracking, no analytics, no personal information collection
+- **Minimal Permissions**: Only 12 permissions required, each with clear justification
+- **Local Storage**: Your preferences and download history stay on your device
+- **Transparent**: Full documentation of why each permission is needed
+
+**📋 [View detailed permission justifications](PERMISSIONS.md)** - See exactly why each permission is required and how it's used.
+
+Our commitment: We only access what we need to download your videos, nothing more.
 
 ## Screenshots
 

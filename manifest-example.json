@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "Vimeo Video Downloader",
+  "version": "1.0.0",
+  "description": "Download Vimeo videos to your computer for offline watching from any webpage with this browser extension.",
+  
+  "permissions": [
+    "downloads",
+    "activeTab", 
+    "storage",
+    "notifications",
+    "contextMenus",
+    "clipboardRead",
+    "tabs",
+    "scripting",
+    "offscreen",
+    "cookies",
+    "webNavigation"
+  ],
+  
+  "host_permissions": [
+    "*://*.vimeo.com/*",
+    "*://*.vimeocdn.com/*"
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Vimeo Video Downloader",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*.vimeo.com/*", "*://*/*.html"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "offscreen": {
+    "url": "offscreen.html",
+    "reasons": ["DOM_PARSER"],
+    "justification": "Process video metadata and handle downloads in background"
+  },
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png", 
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
