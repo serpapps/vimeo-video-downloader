@@ -161,77 +161,35 @@ https://vod-adaptive.akamaized.net/{video_id}/{quality}p/segment{number}.m4s?{au
 ### Video ID Extraction Methods
 
 #### Regex Patterns:
-```python
-import re
+Common patterns for extracting video IDs from Vimeo URLs:
 
-# Standard URL patterns
-VIMEO_PATTERNS = [
-    r'vimeo\.com/(\d+)',
-    r'vimeo\.com/video/(\d+)',
-    r'player\.vimeo\.com/video/(\d+)',
-    r'vimeo\.com/channels/[^/]+/(\d+)',
-    r'vimeo\.com/groups/[^/]+/videos/(\d+)',
-    r'vimeo\.com/album/\d+/video/(\d+)',
-    r'vimeo\.com/showcase/\d+/video/(\d+)',
-]
+```regex
+# Standard patterns
+vimeo\.com/(\d+)
+vimeo\.com/video/(\d+)  
+player\.vimeo\.com/video/(\d+)
+vimeo\.com/channels/[^/]+/(\d+)
+vimeo\.com/groups/[^/]+/videos/(\d+)
+vimeo\.com/album/\d+/video/(\d+)
+vimeo\.com/showcase/\d+/video/(\d+)
 
-def extract_video_id(url):
-    """Extract Vimeo video ID from various URL formats"""
-    for pattern in VIMEO_PATTERNS:
-        match = re.search(pattern, url)
-        if match:
-            return match.group(1)
-    return None
-
-# Advanced extraction with hash parameter
-def extract_video_data(url):
-    """Extract video ID and hash from Vimeo URL"""
-    video_id_match = re.search(r'vimeo\.com/(?:video/)?(\d+)', url)
-    hash_match = re.search(r'[?&]h=([a-f0-9]+)', url)
-    
-    return {
-        'video_id': video_id_match.group(1) if video_id_match else None,
-        'hash': hash_match.group(1) if hash_match else None
-    }
+# Hash parameter extraction
+[?&]h=([a-f0-9]+)
 ```
 
-#### JavaScript Extraction:
-```javascript
-// Browser-based extraction
-function extractVimeoId(url) {
-    const patterns = [
-        /vimeo\.com\/(\d+)/,
-        /vimeo\.com\/video\/(\d+)/,
-        /player\.vimeo\.com\/video\/(\d+)/,
-        /vimeo\.com\/channels\/[^\/]+\/(\d+)/,
-        /vimeo\.com\/groups\/[^\/]+\/videos\/(\d+)/
-    ];
-    
-    for (const pattern of patterns) {
-        const match = url.match(pattern);
-        if (match) return match[1];
-    }
-    return null;
-}
+#### Command-line URL Extraction:
+```bash
+# Extract video ID using grep
+echo "https://vimeo.com/123456789" | grep -oP 'vimeo\.com/(?:video/)?(\d+)' | grep -oP '\d+'
 
-// Extract from page content
-function extractFromPageSource() {
-    // From script tags
-    const configScript = document.querySelector('script[data-config]');
-    if (configScript) {
-        const config = JSON.parse(configScript.textContent);
-        return config.video?.id;
-    }
-    
-    // From meta tags
-    const metaId = document.querySelector('meta[property="al:ios:url"]');
-    if (metaId) {
-        const match = metaId.content.match(/vimeo:\/\/videos\/(\d+)/);
-        return match ? match[1] : null;
-    }
-    
-    return null;
-}
+# Extract using sed
+echo "https://player.vimeo.com/video/123456789" | sed -n 's/.*vimeo\.com\/video\/\([0-9]*\).*/\1/p'
+
+# Using yt-dlp to extract metadata
+yt-dlp --dump-json "https://vimeo.com/123456789" | jq '.id'
+
+# Extract from curl response
+curl -s "https://vimeo.com/123456789" | grep -oP 'vimeo\.com/video/\K\d+'
 ```
 
 ---
@@ -427,101 +385,78 @@ yt-dlp \
 ```
 
 #### Batch Processing:
-```python
-#!/usr/bin/env python3
-# batch_download.py
+```bash
+#!/bin/bash
+# batch_download.sh
 
-import subprocess
-import concurrent.futures
-import time
-from pathlib import Path
-
-def download_video(url, output_dir="./downloads"):
-    """Download single video with error handling"""
-    try:
-        cmd = [
-            "yt-dlp",
-            "--output", f"{output_dir}/%(title)s.%(ext)s",
-            "--format", "bv[height<=1080]+ba/best[height<=1080]",
-            "--write-description",
-            "--write-info-json",
-            "--write-thumbnail",
-            "--embed-metadata",
-            "--retries", "5",
-            "--fragment-retries", "5",
-            "--rate-limit", "1M",
-            url
-        ]
-        
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
-        
-        if result.returncode == 0:
-            print(f"✓ Successfully downloaded: {url}")
-            return True
-        else:
-            print(f"✗ Failed to download: {url}")
-            print(f"Error: {result.stderr}")
-            return False
-            
-    except subprocess.TimeoutExpired:
-        print(f"✗ Timeout downloading: {url}")
-        return False
-    except Exception as e:
-        print(f"✗ Error downloading {url}: {str(e)}")
-        return False
-
-def batch_download(urls, output_dir="./downloads", max_workers=3):
-    """Download multiple videos with parallel processing"""
-    Path(output_dir).mkdir(parents=True, exist_ok=True)
+# Read URLs from file and download each
+while IFS= read -r url; do
+    [[ $url =~ ^#.*$ ]] && continue  # Skip comments
+    [[ -z "$url" ]] && continue      # Skip empty lines
     
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(download_video, url, output_dir): url for url in urls}
-        
-        for future in concurrent.futures.as_completed(futures):
-            url = futures[future]
-            try:
-                success = future.result()
-                if success:
-                    # Rate limiting between downloads
-                    time.sleep(2)
-            except Exception as e:
-                print(f"Exception for {url}: {str(e)}")
-
-if __name__ == "__main__":
-    urls = [
-        "https://vimeo.com/123456789",
-        "https://vimeo.com/987654321",
-        # Add more URLs
-    ]
+    echo "Downloading: $url"
     
-    batch_download(urls, "./downloads", max_workers=2)
+    yt-dlp \
+        --output "./downloads/%(title)s.%(ext)s" \
+        --format "bv[height<=1080]+ba/best[height<=1080]" \
+        --write-description \
+        --write-info-json \
+        --retries 5 \
+        --fragment-retries 5 \
+        --rate-limit 1M \
+        --sleep-interval 2 \
+        "$url"
+        
+    # Brief pause between downloads
+    sleep 3
+    
+done < urls.txt
+
+echo "Batch download completed!"
+```
+
+#### Parallel Downloads with GNU Parallel:
+```bash
+# Install GNU parallel: apt-get install parallel
+
+# Create download function
+download_single() {
+    url="$1"
+    yt-dlp \
+        --output "./downloads/%(title)s.%(ext)s" \
+        --format "bv[height<=1080]+ba/best[height<=1080]" \
+        --retries 5 \
+        --rate-limit 500K \
+        "$url"
+}
+
+export -f download_single
+
+# Run parallel downloads (max 3 concurrent)
+parallel -j 3 download_single :::: urls.txt
 ```
 
 ### Quality Selection Strategies
 
-#### Adaptive Quality Selection:
-```python
-def select_best_quality(formats, max_filesize_mb=500, prefer_mp4=True):
-    """Intelligent quality selection based on constraints"""
-    
-    # Filter by filesize if specified
-    if max_filesize_mb:
-        max_bytes = max_filesize_mb * 1024 * 1024
-        formats = [f for f in formats if f.get('filesize', 0) <= max_bytes]
-    
-    # Prefer MP4 format
-    if prefer_mp4:
-        mp4_formats = [f for f in formats if f.get('ext') == 'mp4']
-        if mp4_formats:
-            formats = mp4_formats
-    
-    # Sort by quality (height, then bitrate)
-    formats.sort(key=lambda f: (f.get('height', 0), f.get('tbr', 0)), reverse=True)
-    
-    return formats[0] if formats else None
+#### yt-dlp Format Selection:
+```bash
+# Best quality available
+yt-dlp -f "best" URL
 
-# Usage with yt-dlp
-quality_selector = "best[filesize<500M][ext=mp4]/best[height<=1080][ext=mp4]/best"
+# Best MP4 up to 1080p
+yt-dlp -f "best[height<=1080][ext=mp4]" URL
+
+# Separate video/audio with quality limits
+yt-dlp -f "bv[height<=1080]+ba/best[height<=1080]" URL
+
+# Specific quality with fallbacks
+yt-dlp -f "best[height=720]/best[height<=720]/best" URL
+
+# Size-based selection
+yt-dlp -f "best[filesize<500M]" URL
+
+# Format priority list
+yt-dlp -f "best[height=1080][ext=mp4]/best[height=720][ext=mp4]/best" URL
 ```
 
 #### Format Priority Configuration:
@@ -569,18 +504,15 @@ mv "/tmp/download/"* "/final/destination/"
 ```
 
 #### Memory Management:
-```python
-import psutil
-import gc
+```bash
+# Monitor memory usage during download
+yt-dlp --verbose "URL" 2>&1 | grep -E "(memory|RAM|buffer)"
 
-def monitor_memory_usage():
-    """Monitor memory usage during download"""
-    process = psutil.Process()
-    return process.memory_info().rss / 1024 / 1024  # MB
+# Use memory-efficient options
+yt-dlp --no-part --no-mtime --buffer-size 1024 "URL"
 
-def cleanup_memory():
-    """Force garbage collection"""
-    gc.collect()
+# Clear system cache (Linux)
+sync && echo 1 > /proc/sys/vm/drop_caches
 ```
 
 ---
@@ -589,65 +521,33 @@ def cleanup_memory():
 
 ### Token-Based Authentication
 
-#### JWT Token Extraction:
-```python
-import jwt
-import requests
-from urllib.parse import parse_qs, urlparse
+#### Browser Cookie Extraction:
+```bash
+# Extract cookies from browser using yt-dlp
+yt-dlp --cookies-from-browser chrome "URL"
+yt-dlp --cookies-from-browser firefox "URL"
+yt-dlp --cookies-from-browser safari "URL"
 
-def extract_vimeo_tokens(video_url):
-    """Extract authentication tokens from Vimeo page"""
-    session = requests.Session()
-    session.headers.update({
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-    })
-    
-    response = session.get(video_url)
-    
-    # Extract from script tags
-    import re
-    config_match = re.search(r'window\.vimeoPlayerConfig\s*=\s*({.+?});', response.text)
-    if config_match:
-        import json
-        config = json.loads(config_match.group(1))
-        return {
-            'jwt': config.get('jwt'),
-            'signature': config.get('signature'),
-            'timestamp': config.get('timestamp')
-        }
-    
-    return {}
+# Save cookies to file
+yt-dlp --cookies cookies.txt --write-info-json "URL"
 
-def validate_jwt_token(token):
-    """Validate JWT token without verification (for inspection)"""
-    try:
-        decoded = jwt.decode(token, options={"verify_signature": False})
-        return decoded
-    except:
-        return None
+# Use saved cookies
+yt-dlp --cookies cookies.txt "URL"
 ```
 
-#### Cookie Management:
-```python
-import http.cookiejar
-import urllib.request
+#### Authentication with Headers:
+```bash
+# Use authentication headers
+yt-dlp --add-header "Authorization: Bearer TOKEN" "URL"
+yt-dlp --add-header "Cookie: session_id=ABC123" "URL"
+yt-dlp --add-header "Referer: https://vimeo.com/" "URL"
 
-def setup_cookie_jar():
-    """Setup cookie jar for session persistence"""
-    cookie_jar = http.cookiejar.CookieJar()
-    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cookie_jar))
-    urllib.request.install_opener(opener)
-    return cookie_jar
-
-def load_browser_cookies():
-    """Load cookies from browser (requires browser_cookie3)"""
-    try:
-        import browser_cookie3
-        cookies = browser_cookie3.chrome(domain_name='vimeo.com')
-        return cookies
-    except ImportError:
-        print("browser_cookie3 not installed")
-        return None
+# Combined authentication
+yt-dlp \
+    --cookies-from-browser chrome \
+    --add-header "User-Agent: Mozilla/5.0..." \
+    --add-header "Referer: https://vimeo.com/" \
+    "URL"
 ```
 
 ### Private Video Access
@@ -666,58 +566,47 @@ yt-dlp \
 ```
 
 #### Domain-Restricted Videos:
-```python
-def bypass_domain_restriction(video_url, allowed_domain):
-    """Set referer to bypass domain restrictions"""
-    headers = {
-        'Referer': allowed_domain,
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-    }
-    
-    # Use with yt-dlp
-    cmd = [
-        'yt-dlp',
-        '--add-header', f'Referer:{allowed_domain}',
-        '--user-agent', headers['User-Agent'],
-        video_url
-    ]
+```bash
+# Set referer header to bypass domain restrictions
+yt-dlp --add-header "Referer: https://allowed-domain.com" "URL"
+
+# Comprehensive domain bypass
+yt-dlp \
+    --add-header "Referer: https://vimeo.com/" \
+    --add-header "Origin: https://vimeo.com" \
+    --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+    "URL"
 ```
 
 ### Rate Limiting & Throttling
 
-#### Adaptive Rate Limiting:
-```python
-import time
-import random
+#### Built-in Rate Limiting:
+```bash
+# Set download rate limit
+yt-dlp --rate-limit 500K "URL"     # 500KB/s
+yt-dlp --rate-limit 2M "URL"       # 2MB/s
 
-class AdaptiveRateLimiter:
-    def __init__(self, initial_delay=1.0, max_delay=60.0):
-        self.initial_delay = initial_delay
-        self.max_delay = max_delay
-        self.current_delay = initial_delay
-        self.success_count = 0
-        self.failure_count = 0
-    
-    def wait(self):
-        """Wait before next request"""
-        time.sleep(self.current_delay + random.uniform(0, 0.5))
-    
-    def success(self):
-        """Called after successful request"""
-        self.success_count += 1
-        self.failure_count = 0
-        
-        # Gradually decrease delay after consecutive successes
-        if self.success_count > 5:
-            self.current_delay = max(self.initial_delay, self.current_delay * 0.9)
-    
-    def failure(self):
-        """Called after failed request"""
-        self.failure_count += 1
-        self.success_count = 0
-        
-        # Exponentially increase delay after failures
-        self.current_delay = min(self.max_delay, self.current_delay * 2)
+# Sleep intervals between requests
+yt-dlp --sleep-interval 2 "URL"    # 2 seconds between requests
+yt-dlp --sleep-requests 1 "URL"    # 1 second between requests
+
+# Combined rate limiting
+yt-dlp \
+    --rate-limit 1M \
+    --sleep-interval 3 \
+    --sleep-requests 1 \
+    "URL"
+```
+
+#### Retry and Timeout Settings:
+```bash
+# Configure retries and timeouts
+yt-dlp \
+    --retries 10 \
+    --fragment-retries 10 \
+    --socket-timeout 30 \
+    --sleep-interval 5 \
+    "URL"
 ```
 
 ---
@@ -727,153 +616,100 @@ class AdaptiveRateLimiter:
 ### Common Error Patterns
 
 #### Authentication Errors:
-```python
-def handle_auth_errors(error_message):
-    """Handle various authentication-related errors"""
-    auth_errors = {
-        "Sign in to confirm your age": "age_verification_required",
-        "Private video": "private_video_access_denied",
-        "Video not available": "geographic_restriction",
-        "Login required": "account_required",
-        "Password required": "password_protected"
-    }
-    
-    for pattern, error_type in auth_errors.items():
-        if pattern.lower() in error_message.lower():
-            return error_type
-    
-    return "unknown_auth_error"
+```bash
+# Common authentication error patterns and solutions
 
-def auth_error_solutions(error_type):
-    """Provide solutions for authentication errors"""
-    solutions = {
-        "age_verification_required": [
-            "Login to Vimeo account",
-            "Use --cookies option with browser cookies",
-            "Verify age on Vimeo website first"
-        ],
-        "private_video_access_denied": [
-            "Check if video is publicly accessible",
-            "Use account with proper permissions",
-            "Contact video owner for access"
-        ],
-        "geographic_restriction": [
-            "Use VPN from allowed region",
-            "Check video availability in your region",
-            "Use proxy servers"
-        ]
-    }
-    
-    return solutions.get(error_type, ["Contact support"])
+# Age verification required
+# Error: "Sign in to confirm your age"
+# Solution: Use browser cookies
+yt-dlp --cookies-from-browser chrome "URL"
+
+# Private video access
+# Error: "Private video" 
+# Solution: Login with proper account
+yt-dlp --username user@email.com --password pass123 "URL"
+
+# Geographic restrictions
+# Error: "Video not available in your country"
+# Solution: Use VPN or proxy
+yt-dlp --proxy socks5://127.0.0.1:1080 "URL"
+
+# Password protected video
+# Error: "Password required"
+# Solution: Provide video password
+yt-dlp --video-password "password123" "URL"
+
+# Login required
+# Error: "Login required to view"
+# Solution: Use account credentials
+yt-dlp --cookies-from-browser firefox "URL"
 ```
 
 #### Network Errors:
-```python
-import requests
-from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.util.retry import Retry
+```bash
+# Handle connection timeouts
+yt-dlp --socket-timeout 60 --retries 10 "URL"
 
-def create_robust_session():
-    """Create HTTP session with retry logic"""
-    session = requests.Session()
-    
-    retry_strategy = Retry(
-        total=5,
-        backoff_factor=2,
-        status_forcelist=[429, 500, 502, 503, 504],
-        method_whitelist=["HEAD", "GET", "OPTIONS"]
-    )
-    
-    adapter = HTTPAdapter(max_retries=retry_strategy)
-    session.mount("http://", adapter)
-    session.mount("https://", adapter)
-    
-    session.headers.update({
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-    })
-    
-    return session
+# Handle intermittent network issues
+yt-dlp \
+    --retries 10 \
+    --fragment-retries 10 \
+    --retry-sleep linear:1:5:2 \
+    "URL"
 
-def handle_network_errors(exception):
-    """Handle various network-related errors"""
-    error_handlers = {
-        requests.exceptions.ConnectionError: "connection_failed",
-        requests.exceptions.Timeout: "request_timeout",
-        requests.exceptions.HTTPError: "http_error",
-        requests.exceptions.SSLError: "ssl_error"
-    }
-    
-    return error_handlers.get(type(exception), "unknown_network_error")
+# Use different user agents for blocked requests
+yt-dlp --user-agent "Mozilla/5.0 (compatible; Googlebot/2.1)" "URL"
+
+# SSL/TLS errors
+yt-dlp --no-check-certificate "URL"
+
+# DNS resolution issues
+yt-dlp --force-ipv4 "URL"
+yt-dlp --force-ipv6 "URL"
 ```
 
 ### Diagnostic Tools
 
 #### Video Availability Checker:
-```python
-def check_video_availability(video_id):
-    """Check if video is available and extract metadata"""
-    import json
-    
-    # Check via oembed API
-    oembed_url = f"https://vimeo.com/api/oembed.json?url=https://vimeo.com/{video_id}"
-    
-    try:
-        response = requests.get(oembed_url)
-        if response.status_code == 200:
-            data = response.json()
-            return {
-                'available': True,
-                'title': data.get('title'),
-                'duration': data.get('duration'),
-                'thumbnail': data.get('thumbnail_url'),
-                'author': data.get('author_name')
-            }
-    except:
-        pass
-    
-    # Check direct access
-    video_url = f"https://vimeo.com/{video_id}"
-    try:
-        response = requests.head(video_url)
-        return {
-            'available': response.status_code == 200,
-            'status_code': response.status_code,
-            'headers': dict(response.headers)
-        }
-    except:
-        return {'available': False, 'error': 'network_error'}
+```bash
+# Check video availability using yt-dlp
+yt-dlp --dump-json "https://vimeo.com/123456789" >/dev/null 2>&1
+if [ $? -eq 0 ]; then
+    echo "Video is available"
+else
+    echo "Video is not available or restricted"
+fi
 
-def diagnose_download_failure(video_url):
-    """Comprehensive diagnosis of download failures"""
-    diagnosis = {
-        'url_valid': False,
-        'video_available': False,
-        'formats_available': [],
-        'authentication_required': False,
-        'geographic_restriction': False,
-        'recommendations': []
-    }
-    
-    # Extract video ID
-    video_id = extract_video_id(video_url)
-    if not video_id:
-        diagnosis['recommendations'].append("Invalid Vimeo URL format")
-        return diagnosis
-    
-    diagnosis['url_valid'] = True
-    
-    # Check availability
-    availability = check_video_availability(video_id)
-    diagnosis['video_available'] = availability.get('available', False)
-    
-    if not diagnosis['video_available']:
-        diagnosis['recommendations'].extend([
-            "Video may be private or deleted",
-            "Check URL accuracy",
-            "Verify video exists on Vimeo"
-        ])
-    
-    return diagnosis
+# Get detailed video information
+yt-dlp --dump-json "https://vimeo.com/123456789" | jq '.title, .duration, .uploader'
+
+# Check video formats without downloading
+yt-dlp --list-formats "https://vimeo.com/123456789"
+
+# Use Vimeo oEmbed API for basic info
+curl -s "https://vimeo.com/api/oembed.json?url=https://vimeo.com/123456789" | jq '.'
+```
+
+#### Download Failure Diagnosis:
+```bash
+# Verbose output for debugging
+yt-dlp --verbose "URL" 2>&1 | tee debug.log
+
+# Test with minimal options
+yt-dlp --no-playlist --no-write-info-json "URL"
+
+# Check authentication requirements
+yt-dlp --list-formats "URL" 2>&1 | grep -i "login\|private\|password"
+
+# Test different user agents
+yt-dlp --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "URL"
+
+# Check for geographic restrictions
+yt-dlp --geo-bypass "URL"
+yt-dlp --geo-bypass-country US "URL"
+
+# Debug network issues
+yt-dlp --verbose --force-ipv4 "URL" 2>&1 | grep -E "HTTP|DNS|connection"
 ```
 
 #### Format Analysis:
@@ -917,49 +753,33 @@ analyze_video_formats() {
 ### Recovery Strategies
 
 #### Partial Download Recovery:
-```python
-def resume_partial_download(output_file, video_url):
-    """Resume partially downloaded file"""
-    import os
-    
-    if os.path.exists(output_file + '.part'):
-        print(f"Found partial download: {output_file}.part")
-        
-        # Get file size
-        partial_size = os.path.getsize(output_file + '.part')
-        print(f"Partial size: {partial_size} bytes")
-        
-        # Resume with yt-dlp
-        cmd = [
-            'yt-dlp',
-            '--continue',
-            '--output', output_file,
-            video_url
-        ]
-        
-        return subprocess.run(cmd)
-    
-    return None
+```bash
+# yt-dlp automatically resumes partial downloads
+yt-dlp --continue "URL"
 
-def cleanup_failed_downloads(download_dir):
-    """Clean up failed download artifacts"""
-    import glob
-    
-    patterns = [
-        '*.part',
-        '*.temp',
-        '*.tmp',
-        '*.ytdl'
-    ]
-    
-    for pattern in patterns:
-        files = glob.glob(os.path.join(download_dir, pattern))
-        for file in files:
-            try:
-                os.remove(file)
-                print(f"Cleaned up: {file}")
-            except OSError:
-                pass
+# Resume from specific byte position
+yt-dlp --external-downloader aria2c --external-downloader-args "-c" "URL"
+
+# Check for partial files and resume
+find ./downloads -name "*.part" -exec yt-dlp --continue {} \;
+
+# Force restart if resume fails
+yt-dlp --no-continue "URL"
+```
+
+#### Failed Download Cleanup:
+```bash
+# Clean up partial download files
+find ./downloads -name "*.part" -delete
+find ./downloads -name "*.temp" -delete
+find ./downloads -name "*.tmp" -delete
+find ./downloads -name "*.ytdl" -delete
+
+# Clean up empty directories
+find ./downloads -type d -empty -delete
+
+# Check for corrupted files
+find ./downloads -name "*.mp4" -size -1M -delete  # Remove files smaller than 1MB
 ```
 
 ---
@@ -976,117 +796,72 @@ def cleanup_failed_downloads(download_dir):
 - **Automated Access**: Should respect rate limits and robot.txt
 
 #### Best Practices:
-```python
-def check_robots_txt():
-    """Check Vimeo's robots.txt for crawling guidelines"""
-    robots_url = "https://vimeo.com/robots.txt"
-    
-    try:
-        response = requests.get(robots_url)
-        if response.status_code == 200:
-            print("Robots.txt content:")
-            print(response.text)
-            
-            # Parse for relevant rules
-            lines = response.text.split('\n')
-            for line in lines:
-                if 'Crawl-delay' in line:
-                    delay = line.split(':')[1].strip()
-                    print(f"Recommended crawl delay: {delay} seconds")
-    except:
-        print("Could not fetch robots.txt")
+```bash
+# Check Vimeo's robots.txt for guidelines
+curl -s "https://vimeo.com/robots.txt"
 
-def respect_rate_limits():
-    """Implement rate limiting based on best practices"""
-    return {
-        'requests_per_minute': 60,
-        'concurrent_downloads': 2,
-        'delay_between_requests': 1.0,
-        'backoff_on_error': True
-    }
+# Respect crawl delay recommendations
+# (Usually 1-5 seconds between requests)
+sleep 2
+
+# Follow rate limiting guidelines
+yt-dlp --sleep-interval 2 --rate-limit 1M "URL"
 ```
 
 ### Content Protection
 
 #### DRM Detection:
-```python
-def detect_drm_protection(video_url):
-    """Detect if video has DRM protection"""
-    drm_indicators = [
-        'widevine',
-        'playready',
-        'fairplay',
-        'drm',
-        'encrypted'
-    ]
-    
-    try:
-        # Check video page source
-        response = requests.get(video_url)
-        page_content = response.text.lower()
-        
-        for indicator in drm_indicators:
-            if indicator in page_content:
-                return True, indicator
-                
-        # Check for encrypted streams in m3u8
-        if 'method=aes' in page_content:
-            return True, 'aes_encryption'
-            
-    except:
-        pass
-    
-    return False, None
+```bash
+# Check for DRM protection indicators
+yt-dlp --list-formats "URL" 2>&1 | grep -i "drm\|widevine\|playready\|fairplay"
 
-def handle_protected_content(video_url):
-    """Handle DRM-protected content appropriately"""
-    is_protected, protection_type = detect_drm_protection(video_url)
-    
-    if is_protected:
-        print(f"Content is protected with {protection_type}")
-        print("DRM-protected content cannot be downloaded")
-        print("Consider:")
-        print("- Watching through official player")
-        print("- Checking if unprotected version available")
-        print("- Contacting content owner for download permission")
-        return False
-    
-    return True
+# Check if video requires premium subscription
+yt-dlp --dump-json "URL" | jq '.is_live, .availability, .formats[].has_drm'
+
+# Test video accessibility
+yt-dlp --no-download --verbose "URL" 2>&1 | grep -i "protected\|encrypted\|drm"
+```
+
+#### Handling Protected Content:
+```bash
+# For DRM-protected content, these are the limitations:
+echo "DRM-protected content cannot be downloaded via standard tools"
+echo "Alternatives:"
+echo "- Use official Vimeo player/app"
+echo "- Check if creator offers DRM-free version"
+echo "- Contact content owner for permission"
+
+# Check if content is accessible
+yt-dlp --no-download "URL" && echo "Content accessible" || echo "Content protected/restricted"
 ```
 
 ### Privacy Considerations
 
 #### Data Minimization:
-```python
-def minimize_data_collection():
-    """Configure tools to minimize data collection"""
-    yt_dlp_config = {
-        'writeinfojson': False,  # Don't save metadata unless needed
-        'writethumbnail': False,  # Don't save thumbnails unless needed
-        'writesubtitles': False,  # Don't save subtitles unless needed
-        'writedescription': False,  # Don't save description unless needed
-        'no_warnings': True,  # Reduce log verbosity
-        'no_color': True,  # Disable colored output
-    }
-    
-    return yt_dlp_config
+```bash
+# Minimal data collection configuration
+yt-dlp \
+    --no-write-info-json \
+    --no-write-thumbnail \
+    --no-write-description \
+    --no-write-sub \
+    --no-write-auto-sub \
+    --no-playlist \
+    "URL"
 
-def anonymous_download_session():
-    """Create anonymous download session"""
-    session = requests.Session()
-    
-    # Remove identifying headers
-    session.headers.clear()
-    session.headers.update({
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Accept-Encoding': 'gzip, deflate',
-        'DNT': '1',
-        'Connection': 'keep-alive'
-    })
-    
-    return session
+# Anonymous downloading with minimal headers
+yt-dlp \
+    --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
+    --add-header "DNT: 1" \
+    --add-header "Accept-Language: en-US,en;q=0.5" \
+    "URL"
+
+# Use proxy for additional privacy
+yt-dlp --proxy socks5://127.0.0.1:1080 "URL"
+
+# Clear sensitive data after download
+unset YOUTUBE_DL_OPTS
+history -c  # Clear bash history if needed
 ```
 
 ---
