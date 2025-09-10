@@ -89,7 +89,32 @@ Download Vimeo videos to your computer for offline watching from any webpage wit
 
 > Note: You can find your license key in your email confirmation from purchasing the product
 
----
+
+
+## Permissions Justifications
+
+### downloads
+Required to programmatically initiate and manage video file downloads to the user's computer. The extension needs to trigger downloads of processed Vimeo video files and track download progress.
+
+### activeTab
+Needed to access and analyze the currently active Vimeo tab to detect video content, extract video metadata, and inject necessary scripts for video processing.
+
+### storage
+Used to persist user preferences, download history, activation status, authentication tokens, and temporary video processing data across browser sessions.
+tabs Necessary to query and interact with browser tabs to detect Vimeo pages, inject content scripts, and manage video detection across multiple tabs. 
+
+### scripting
+Required to inject content scripts into Vimeo pages for video detection, data extraction, and communication between the extension and web page content.
+
+### offscreen
+Used to create offscreen documents for complex video processing tasks (HLS parsing, format conversion) that require additional computational resources without blocking the main UI.
+
+### cookies
+Needed to access Vimeo authentication cookies for downloading private or password-protected videos that require user authentication. 
+
+### host_permissions
+Grants access to Vimeo domains (vimeo.com, player.vimeo.com, vimeocdn.com) and associated CDN services to extract video streams, metadata, and handle authentication for video downloads.
+
 
 <details>
 
