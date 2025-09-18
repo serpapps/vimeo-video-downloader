@@ -131,9 +131,7 @@ Needed to access Vimeo authentication cookies for downloading private or passwor
 Grants access to Vimeo domains (vimeo.com, player.vimeo.com, vimeocdn.com) and associated CDN services to extract video streams, metadata, and handle authentication for video downloads.
 
 
-<details>
 
-<summary>More videos</summary>
 
 # How to Download Vimeo Videos for Free (Mac & Windows) | No Extensions/Tools Needed (MAC VERSION)
 
@@ -147,9 +145,11 @@ Grants access to Vimeo domains (vimeo.com, player.vimeo.com, vimeocdn.com) and a
 <img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/how-to-download-vimeo-videos-for-free-mac-windows-no-extensionstools-needed-windows-version.jpg" width="700px">
 </a>
 
-</details>
 
----
+<details>
+
+<summary>Vimeo R&D</summary>
+
 
 # Vimeo Video Download Research & Implementation Guide
 
@@ -1019,9 +1019,7 @@ history -c  # Clear bash history if needed
 
 ---
 
-## Conclusion
-
-This comprehensive guide provides detailed technical insights into Vimeo's video infrastructure and practical implementation strategies for video downloading. The information should be used responsibly, respecting copyright laws, terms of service, and privacy considerations.
+This guide provides detailed technical insights into Vimeo's video infrastructure and practical implementation strategies for video downloading. The information should be used responsibly, respecting copyright laws, terms of service, and privacy considerations.
 
 For support and updates, refer to the tool documentation:
 - [yt-dlp Documentation](https://github.com/yt-dlp/yt-dlp)
@@ -1029,3 +1027,5 @@ For support and updates, refer to the tool documentation:
 - [Vimeo Developer API](https://developer.vimeo.com/)
 
 **Disclaimer**: This guide is for educational and research purposes. Always comply with applicable laws, terms of service, and respect content creators' rights.
+
+</details>
