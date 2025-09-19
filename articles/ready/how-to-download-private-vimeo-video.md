@@ -69,7 +69,7 @@ Before attempting to download private content, it's essential to understand the 
 - Used by creators for collaboration
 - May have download restrictions built-in
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot-1.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/884674e0-dfcb-4dc1-a0d3-fa29df51d55e)
 
 ### Privacy Settings Impact
 
@@ -223,7 +223,7 @@ Once you have access to an unlisted video, typical download methods work:
 - Respect the creator's intention for limited distribution
 - Consider why the content wasn't made public
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot2.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/8a317739-816a-446f-95d2-bd8b5aec63cc)
 
 ---
 
@@ -331,7 +331,7 @@ Member-only content requires Vimeo account authentication and possibly additiona
 - Use downloads within subscription scope
 - Consider subscription renewal requirements
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot3.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/46c7dcda-c6a9-4036-895b-f34fb3c8f857)
 
 ---
 
@@ -392,7 +392,7 @@ The [Vimeo Video Downloader](https://serp.ly/vimeo-video-downloader) is specific
 **Support**: Regular updates and customer assistance
 **Efficiency**: Faster and more reliable than manual methods
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot4.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/6040ffdf-1f96-4d92-85c4-84474b769642)
 
 ---
 
@@ -510,7 +510,7 @@ yt-dlp --cookies cookies.txt "private_video_url"
 - Use secure methods for cookie storage
 - Clear cookies when finished downloading
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot5.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/fd7c71a8-7ec1-44f3-9522-c214f3667dc9)
 
 ---
 

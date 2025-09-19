@@ -52,7 +52,7 @@ Vimeo supports several caption formats:
 - **SRT (.srt)**: SubRip format, widely compatible
 - **DFXP/TTML**: Advanced timing and styling options
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot-1.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/884674e0-dfcb-4dc1-a0d3-fa29df51d55e)
 
 ---
 
@@ -129,7 +129,7 @@ The [Vimeo Video Downloader](https://serp.ly/vimeo-video-downloader) extension n
 4. **Select transcript/caption options** if available
 5. **Download in your preferred format**
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot2.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/8a317739-816a-446f-95d2-bd8b5aec63cc)
 
 ### ⚠️ Considerations:
 - Extension quality varies significantly
@@ -186,7 +186,7 @@ When videos don't have built-in captions, or when you need higher accuracy, thir
 - oTranscribe (web-based)
 - Trint (professional)
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot3.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/46c7dcda-c6a9-4036-895b-f34fb3c8f857)
 
 ---
 
@@ -264,7 +264,7 @@ The [Vimeo Video Downloader](https://serp.ly/vimeo-video-downloader) offers comp
 4. Select video and transcript options
 5. Download in seconds
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot4.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/6040ffdf-1f96-4d92-85c4-84474b769642)
 
 ### Advanced Features:
 
@@ -341,7 +341,7 @@ Transcripts/
 **For Web Use**: VTT format for HTML5 compatibility
 **For Accessibility**: Properly formatted with speaker tags
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot5.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/fd7c71a8-7ec1-44f3-9522-c214f3667dc9)
 
 ---
 

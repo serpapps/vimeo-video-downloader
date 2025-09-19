@@ -63,7 +63,7 @@ When a video is embedded on a website, it's typically displayed using an iframe 
 - **News Sites**: Interviews, documentaries
 - **Social Platforms**: Embedded content in posts and articles
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot-1.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/884674e0-dfcb-4dc1-a0d3-fa29df51d55e)
 
 ---
 
@@ -170,7 +170,7 @@ Look for URLs containing these patterns:
 3. **Look for JSON data** containing video information
 4. **Extract the video URLs** from the configuration
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot2.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/8a317739-816a-446f-95d2-bd8b5aec63cc)
 
 ### ⚠️ Technical Requirements:
 - Basic understanding of browser developer tools
@@ -217,7 +217,7 @@ The [Vimeo Video Downloader](https://serp.ly/vimeo-video-downloader) extension i
 - Original quality preservation
 - No watermarks added
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot3.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/46c7dcda-c6a9-4036-895b-f34fb3c8f857)
 
 ### Extension Setup Tips
 
@@ -290,7 +290,7 @@ The [Vimeo Video Downloader](https://serp.ly/vimeo-video-downloader) is specific
 
 **Compliance**: Respects video owner settings and permissions
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot4.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/6040ffdf-1f96-4d92-85c4-84474b769642)
 
 ### Batch Processing Features
 
@@ -436,7 +436,7 @@ Different websites implement Vimeo embeds in various ways, each requiring specif
 - Could have custom security measures
 - Professional tools provide best success rates
 
-![Vimeo Video Downloader Screenshot](../screenshots/vimeo-video-downloader-screenshot5.jpg)
+![Vimeo Video Downloader Screenshot](https://github.com/user-attachments/assets/fd7c71a8-7ec1-44f3-9522-c214f3667dc9)
 
 ### Platform-Specific Tips
 
