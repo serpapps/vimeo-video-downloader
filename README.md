@@ -1,11 +1,54 @@
 # Vimeo Video Downloader (Browser Extension)
 
-Download Vimeo videos to your computer for offline watching from any webpage with this browser extension.
+The **Vimeo Video Downloader** browser extension makes it simple to save Vimeo videos directly to your computer — in their original quality — for offline access anytime. Whether you’re a student, professional, or creator, this tool ensures you’ll never lose access to valuable video content again.
 
-- Fast downloads (no re-encoding)
-- Original quality preserved (up to 4K)
-- No data tracking
-- No watermarks or branding added
+Unlike unreliable “online converters” or shady download sites, this extension works **right inside your browser**, automatically detecting videos on any Vimeo page and providing a clean, one-click download experience. No re-encoding, no watermarks, and no unnecessary tracking.
+
+### Why It’s Different
+
+* **Fast downloads, no waiting** – files are saved directly, without quality loss or re-processing
+* **Original quality preserved** – from 240p up to 4K UHD, depending on source video
+* **Works everywhere** – public, embedded, and private (authenticated) Vimeo videos
+* **Lightweight & transparent** – minimal permissions, open source, and no hidden data collection
+* **Offline freedom** – watch lectures, tutorials, or films without buffering or internet access
+
+### Who It’s For
+
+* 🎓 **Students & educators** – save lecture replays or course videos before they expire
+* 🎥 **Content creators** – back up portfolios, demo reels, or client projects
+* 🧑‍💼 **Professionals** – keep access to training, onboarding, or event recordings
+* 📚 **Researchers & archivists** – organize video libraries with meaningful filenames
+* 🌍 **Everyday users** – enjoy your favorite videos offline while traveling or on slow connections
+
+### Key Features
+
+* 🔎 Auto-detects videos on any Vimeo page
+* 📺 Supports embedded players & showcases
+* ⬇️ Download in Full HD and up to 4K when available
+* 🖼 Thumbnail preview & video metadata extraction
+* ⚡ Fast & reliable downloads (no re-encoding)
+* 🛡 Privacy-first design (no tracking, no ads)
+* 🔄 Regular updates & community support
+
+### Privacy Commitment
+
+We designed this extension with **user privacy at the core**:
+
+* No analytics, telemetry, or data sharing
+* Only the minimal permissions needed for downloads
+* Preferences and history stored locally on your device
+* Transparent documentation for every requested permission
+
+---
+
+💡 In short: this is the simplest, most secure way to save Vimeo videos to your computer in their original quality.
+
+🔗 [Get it here](https://serp.ly/vimeo-video-downloader)
+
+---
+
+Would you like me to also draft a **shorter, more marketing-style version** of this (for Chrome Web Store / Edge Add-ons listing), or do you prefer keeping the technical + detailed style throughout?
+
 
 <a href="https://www.youtube.com/watch?v=-_zu7XgFuKs" target="_blank">
 <img src="https://github.com/user-attachments/assets/428ebb22-950e-4aaf-a9b0-065313273b48" width="900px">
