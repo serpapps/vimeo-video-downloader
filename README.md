@@ -40,10 +40,11 @@ We designed this extension with **user privacy at the core**:
 * Transparent documentation for every requested permission
 
 ---
-
-💡 In short: this is the simplest, most secure way to save Vimeo videos to your computer in their original quality.
-
-🔗 [Get it here](https://serp.ly/vimeo-video-downloader)
+[![Purchase a License Key](https://img.shields.io/badge/Purchase%20a%20License%20Key-brightgreen?style=for-the-badge&logo=buymeacoffee&logoColor=white)](https://serp.ly/vimeo-video-downloader)
+<br>
+[![Get Latest Release](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge&logo=github)](https://github.com/serpapps/vimeo-video-downloader/releases)
+<br>
+[![Installation Instructions](https://img.shields.io/badge/Installation%20Instructions-orange?style=for-the-badge&logo=readthedocs&logoColor=white)](https://github.com/serpapps/vimeo-video-downloader/blob/main/INSTALL-SETUP.md)
 
 ---
 
@@ -138,7 +139,7 @@ Our commitment: We only access what we need to download your videos, nothing mor
 ## Installation Instructions
 
 1. "Star ⭐" this repository <a href="https://public-files.gumroad.com/fgqglcvq4v0u32yc0x0jvsllk4x6" target="_blank">click the button that looks like this</a>
-2. Download the latest `.zip` file from [Releases](https://github.com/serpapps/vimeo-video-downloader/releases)
+2. Download the latest `.zip` file from [![Download Now](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge&logo=github)](https://github.com/serpapps/vimeo-video-downloader/releases)
 3. Extract the ZIP file (aka double click it)
 4. Open Chrome and go to `chrome://extensions/`
 5. Enable "Developer mode" (top right toggle)
