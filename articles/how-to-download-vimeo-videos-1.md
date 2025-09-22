@@ -4,18 +4,19 @@ tags: ['streamlink', 'ffmpeg', 'vimeo']
 
 # How to download vimeo videos
 
-Vimeo embeds on Skool are streaming via HLS; streamlink already knows that plugin and can grab the master manifest (https://player.vimeo.com/video/<id>). Your manual flow was:
-<img width="1000" src="https://raw.githubusercontent.com/serpapps/vimeo-video-downloader/refs/heads/main/articles/1.png" />
+Vimeo embeds on Skool are streaming via HLS. 
 
+Streamlink already knows that plugin and can grab the master manifest `https://player.vimeo.com/video/<id>`.
+
+<img width="1000" src="https://raw.githubusercontent.com/serpapps/vimeo-video-downloader/refs/heads/main/articles/1.png" />
 
 In this situation, the Vimeo URL is either in the DOM or maybe can be constructed just from the video ID.
 
 <img width="1000" src="https://raw.githubusercontent.com/serpapps/vimeo-video-downloader/refs/heads/main/articles/2.png" />
 
-
 And u use `streamlink`
 
-❯ streamlink https://player.vimeo.com/video/1056875977 best -o ~/Desktop/vimeo_video.mp4
+`❯ streamlink https://player.vimeo.com/video/1056875977 best -o ~/Desktop/vimeo_video.mp4`
 ```
 [cli][info] Found matching plugin vimeo for URL https://player.vimeo.com/video/1056875977
 [stream.hls][warning] Unrecognized language for media playlist: language='en-x-autogen' name='English (auto-generated)'
@@ -33,7 +34,7 @@ And u use `streamlink`
 
  And at least on a Mac that gives me an MP4 that doesn't work, but then I run...
 
-❯ ffmpeg -i vimeo_video.mp4 output.mp4
+`❯ ffmpeg -i vimeo_video.mp4 output.mp4`
 ```
 ffmpeg version 7.1.1 Copyright (c) 2000-2025 the FFmpeg developers
   built with Apple clang version 17.0.0 (clang-1700.0.13.3)
@@ -104,7 +105,10 @@ and it works!
 This particular video is public (or playable without cookies); streamlink’s Vimeo plugin can fetch the manifest via Vimeo’s API without your session.
 
 streamlink itself handles the necessary requests under the hood, so you didn’t need to supply headers for this case.
-For private or cookie-dependent videos, streamlink does need the headers/cookies (via --http-header or --http-cookie). So while the bare command happened to succeed here, we’ll still want our automation to capture and forward headers for the locked-down cases.
+
+For private or cookie-dependent videos, streamlink does need the headers/cookies (via --http-header or --http-cookie). So while the bare command happened to succeed here, 
+
+we’ll still want our automation to capture and forward headers for the locked-down cases.
 
 
 
