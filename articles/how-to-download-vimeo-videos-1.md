@@ -2,7 +2,7 @@
 tags: ['streamlink', 'ffmpeg', 'vimeo']
 ```
 
-# How to download vimeo videos
+# How to download Vimeo Videos (streaming via HLS / streamlink)
 
 Vimeo embeds on Skool are streaming via HLS. 
 
@@ -15,6 +15,8 @@ In this situation, the Vimeo URL is either in the DOM or maybe can be constructe
 <img width="1000" src="https://raw.githubusercontent.com/serpapps/vimeo-video-downloader/refs/heads/main/articles/2.png" />
 
 And u use `streamlink`
+
+👉 Or just get the Vimeo Video Downloader: https://serp.ly/vimeo-video-downloader
 
 `❯ streamlink https://player.vimeo.com/video/1056875977 best -o ~/Desktop/vimeo_video.mp4`
 ```
@@ -108,12 +110,9 @@ streamlink itself handles the necessary requests under the hood, so you didn’t
 
 For private or cookie-dependent videos, streamlink does need the headers/cookies (via --http-header or --http-cookie). So while the bare command happened to succeed here, 
 
-we’ll still want our automation to capture and forward headers for the locked-down cases.
+We’ll still want our automation to capture and forward headers for the locked-down cases.
 
-
-
-
-
+👉 Get Vimeo Video Downloader: https://serp.ly/vimeo-video-downloader
 
 
 
