@@ -3,7 +3,7 @@ platform: Vimeo
 seo_title: Vimeo Video Downloader - How to Download Vimeo videos quickly & easily
 seo_description: Download Vimeo videos conveniently and quickly to easily backup your collection or view and organize for offline viewing.
 product_page_url: https://store.serp.co/products/vimeo-video-downloader
-purchase_url: https://serp.ly/skool-video-downloader
+purchase_url: https://serp.ly/vimeo-video-downloader
 stripe:
   price_id: price_1S2fcZ06JrOmKRCmTwbmGNxm
   success_url: https://store.serp.co/products/vimeo-video-downloader?checkout=success
