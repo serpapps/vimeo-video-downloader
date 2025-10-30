@@ -1,4 +1,4 @@
-# Vimeo Video Downloader (Browser Extension)
+# Vimeo Video Downloader (Browser Extension for Chrome, Firefox, Edge, Opera)
 
 The **Vimeo Video Downloader** browser extension makes it simple to save Vimeo videos directly to your computer — in their original quality — for offline access anytime. Whether you’re a student, professional, or creator, this tool ensures you’ll never lose access to valuable video content again.
 
