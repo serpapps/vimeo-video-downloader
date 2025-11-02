@@ -4,6 +4,12 @@ The **Vimeo Video Downloader** browser extension makes it simple to save Vimeo v
 
 Unlike unreliable “online converters” or shady download sites, this extension works **right inside your browser**, automatically detecting videos on any Vimeo page and providing a clean, one-click download experience. No re-encoding, no watermarks, and no unnecessary tracking.
 
+## watch the video 👇
+
+<a href="https://www.youtube.com/watch?v=jKf8VqvLGqQ" target="_blank">
+<img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/download-vimeo-videos-private-or-public-with-browser-extension-chrome-firefox-edge-opera.jpg" width="700px">
+</a>
+
 ### Why It’s Different
 
 * **Fast downloads, no waiting** – files are saved directly, without quality loss or re-processing
