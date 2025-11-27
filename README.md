@@ -201,6 +201,16 @@ Grants access to Vimeo domains (vimeo.com, player.vimeo.com, vimeocdn.com) and a
 <summary>Vimeo R&D</summary>
 
 
+
+## Related
+
+- https://github.com/serpapps/vimeo-video-downloader
+- https://gist.github.com/devinschumacher/a189434fc9f374965888ca2dc793953e
+- https://gist.github.com/devinschumacher/8024bc4693d79aef641b2c281e45d6cb
+- [How to Download Password Protected Vimeo Videos](https://gist.github.com/devinschumacher/d28b419be2b349b9730dee1137b292da)
+- https://gist.github.com/devinschumacher/8095f410a01494bc04ebf6c6440ce25d
+
+
 # Vimeo Video Download Research & Implementation Guide
 
 ## Table of Contents
