@@ -46,6 +46,7 @@ We designed this extension with **user privacy at the core**:
 * Transparent documentation for every requested permission
 
 ---
+
 [![Purchase a License Key](https://img.shields.io/badge/Purchase%20a%20License%20Key-brightgreen?style=for-the-badge&logo=buymeacoffee&logoColor=white)](https://serp.ly/vimeo-video-downloader)
 <br>
 [![Get Latest Release](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge&logo=github)](https://github.com/serpapps/vimeo-video-downloader/releases)
@@ -53,9 +54,6 @@ We designed this extension with **user privacy at the core**:
 [![Installation Instructions](https://img.shields.io/badge/Installation%20Instructions-orange?style=for-the-badge&logo=readthedocs&logoColor=white)](https://github.com/serpapps/vimeo-video-downloader/blob/main/INSTALL-SETUP.md)
 
 ---
-
-Would you like me to also draft a **shorter, more marketing-style version** of this (for Chrome Web Store / Edge Add-ons listing), or do you prefer keeping the technical + detailed style throughout?
-
 
 <a href="https://www.youtube.com/watch?v=-_zu7XgFuKs" target="_blank">
 <img src="https://github.com/user-attachments/assets/428ebb22-950e-4aaf-a9b0-065313273b48" width="900px">
