@@ -162,15 +162,14 @@ Purchase a license key to get started. For pricing and license details, visit th
 
 <br>
 ![vimeo-video-downloader-screenshot1](https://github.com/user-attachments/assets/884674e0-dfcb-4dc1-a0d3-fa29df51d55e)
-<br><br>
+
 ![vimeo-video-downloader-screenshot2](https://github.com/user-attachments/assets/8a317739-816a-446f-95d2-bd8b5aec63cc)
-<br><br>
+
 ![vimeo-video-downloader-screenshot3](https://github.com/user-attachments/assets/46c7dcda-c6a9-4036-895b-f34fb3c8f857)
-<br><br>
+
 ![vimeo-video-downloader-screenshot4](https://github.com/user-attachments/assets/6040ffdf-1f96-4d92-85c4-84474b769642)
-<br><br>
+
 ![vimeo-video-downloader-screenshot5](https://github.com/user-attachments/assets/fd7c71a8-7ec1-44f3-9522-c214f3667dc9)
-<br><br>
 
 ## Installation Instructions
 
