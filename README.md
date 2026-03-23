@@ -217,6 +217,10 @@ This extension is intended for downloading content you own or have permission to
 
 `vimeo downloader` `vimeo video downloader` `download vimeo` `vimeo mp4` `vimeo browser extension` `save vimeo videos` `vimeo private video downloader` `vimeo 4k downloader`
 
+## License
+
+This repository is distributed under the proprietary SERP Apps license in the [LICENSE](LICENSE) file. Review that file before copying, modifying, or redistributing any part of this project.
+
 ## Get It
 
 - **Start here:** [SERP Vimeo Video Downloader](https://serp.ly/vimeo-video-downloader)
