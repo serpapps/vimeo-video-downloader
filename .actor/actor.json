@@ -1,0 +1,10 @@
+{
+  "actorSpecification": 1,
+  "buildTag": "latest",
+  "description": "Browser extension for saving Vimeo videos in original quality from public, embedded, and private authenticated pages for offline viewing.",
+  "input": "./INPUT_SCHEMA.json",
+  "name": "vimeo-video-downloader",
+  "readme": "../README.md",
+  "title": "Vimeo Video Downloader",
+  "version": "0.0"
+}
