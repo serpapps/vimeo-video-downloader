@@ -161,6 +161,7 @@ Purchase a license key to get started. For pricing and license details, visit th
 ## Screenshots
 
 <br>
+
 ![vimeo-video-downloader-screenshot1](https://github.com/user-attachments/assets/884674e0-dfcb-4dc1-a0d3-fa29df51d55e)
 
 ![vimeo-video-downloader-screenshot2](https://github.com/user-attachments/assets/8a317739-816a-446f-95d2-bd8b5aec63cc)
@@ -173,7 +174,8 @@ Purchase a license key to get started. For pricing and license details, visit th
 
 ## Installation Instructions
 
-1. "Star ⭐" this repository <a href="https://public-files.gumroad.com/fgqglcvq4v0u32yc0x0jvsllk4x6" target="_blank">click the button that looks like this</a>
+
+1. "Star ⭐" this repository - aka click the button that looks like this ![star](https://github.com/user-attachments/assets/5f2a53a9-b426-4879-bc56-2115f2d67df9)
 2. Download the latest `.zip` file from [![Download Now](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge&logo=github)](https://github.com/serpapps/vimeo-video-downloader/releases)
 3. Extract the ZIP file (aka double click it)
 4. Open Chrome and go to `chrome://extensions/`
@@ -254,11 +256,6 @@ This repository is distributed under the proprietary SERP Apps license in the [L
 - https://gist.github.com/devinschumacher/8024bc4693d79aef641b2c281e45d6cb
 - [How to Download Password Protected Vimeo Videos](https://gist.github.com/devinschumacher/d28b419be2b349b9730dee1137b292da)
 - https://gist.github.com/devinschumacher/8095f410a01494bc04ebf6c6440ce25d
-
-# Vimeo Video Download Research & Implementation Guide
-
-This guide provides detailed technical insights into Vimeo's video infrastructure and practical implementation strategies for video downloading. The information should be used responsibly, respecting copyright laws, terms of service, and privacy considerations.
-
-**Disclaimer**: This guide is for educational and research purposes. Always comply with applicable laws, terms of service, and respect content creators' rights.
+rights.
 
 </details>
