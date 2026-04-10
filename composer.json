@@ -1,0 +1,24 @@
+{
+    "name": "serpapps/vimeo-video-downloader",
+    "type": "library",
+    "description": "Save Vimeo videos instantly for offline viewing",
+    "keywords": [
+        "vimeo-video-downloader",
+        "vimeo-downloader",
+        "download-vimeo-videos",
+        "download-private-vimeo-videos",
+        "video-downloader"
+    ],
+    "homepage": "https://github.com/serpapps/vimeo-video-downloader",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SERP Apps",
+            "homepage": "https://github.com/serpapps",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    }
+}
