@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Downloader for Vimeo</title>
+    <script src="site-config.js"></script>
+    <script src="logger.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/popup-enhanced.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Help text display area at the very top -->
+      <div id="helpTextDisplay" class="help-text-display hidden">
+        <div class="help-text-content">
+          <strong>How to Use:</strong> Navigate to a Vimeo video page and the
+          extension will automatically detect and extract video information. For
+          password-protected videos, you'll be prompted to enter the password.
+        </div>
+      </div>
+
+      <div class="header">
+        <h2>Video Downloader for Vimeo</h2>
+        <div class="header-right">
+          <!-- <div class="version">v2.0.1</div> -->
+          <button id="helpBtn" class="help-btn" title="Help">&#x2753;</button>
+        </div>
+        <div id="authStatus" class="auth-status"></div>
+      </div>
+
+      <!-- Shown while we determine activation state (prevents blank UI/flicker) -->
+      <div id="bootSplash" class="status loading">Loading...</div>
+      <div id="activationSection" class="activation-section hidden"></div>
+
+      <div id="mainContent" class="hidden" style="margin-top: 20px">
+        <div id="embedDetected" class="embed-detected hidden">
+          <div class="embed-notice">
+            <span class="embed-icon">&#x1F3A5;</span>
+            <span class="embed-text">Vimeo embed detected on this page!</span>
+          </div>
+        </div>
+
+        <div id="videoSelectionSection" class="video-selection-section hidden">
+          <div class="selection-header">
+            <span class="selection-icon">&#x1F3AC;</span>
+            <span class="selection-text"
+              >Multiple videos found - Choose which one to download:</span
+            >
+          </div>
+          <div id="videoList" class="video-list">
+            <!-- Video selection items will be populated here -->
+          </div>
+        </div>
+
+        <div id="passwordSection" class="password-section hidden">
+          <label for="passwordInput">Video Password:</label>
+          <input
+            type="password"
+            id="passwordInput"
+            placeholder="Enter password..."
+          />
+        </div>
+
+        <div id="status" class="status">
+          Checking current page for Vimeo video...
+        </div>
+
+        <div id="inlineActions" class="inline-actions" style="margin: 8px 0 12px 0; display: flex; gap: 8px;">
+          <button id="getPlaylistBtn" class="refresh-btn hidden" title="Force playlist detection" style="padding: 4px 8px; font-size: 12px; border: 1px solid #ccc; border-radius: 4px; background: #f5f5f5; cursor: pointer;">
+            &#x1F4DC; Get Playlist
+          </button>
+        </div>
+
+        <div id="videoInfo" class="video-info hidden">
+          <div class="video-card">
+            <div class="video-thumbnail-container">
+              <img
+                id="videoThumbnail"
+                src=""
+                alt="Video thumbnail"
+                class="video-thumbnail-image hidden"
+              />
+              <div id="thumbnailPlaceholder" class="thumbnail-placeholder">
+                <div class="placeholder-content">
+                  <div class="placeholder-icon">&#x1F3A5;</div>
+                  <span class="placeholder-text">No thumbnail available</span>
+                </div>
+              </div>
+              <div class="video-duration-badge" id="durationBadge"></div>
+            </div>
+            <div class="video-content">
+              <h3 id="videoTitle" class="video-title">Loading...</h3>
+              <div class="video-metadata">
+                <div class="metadata-row">
+                  <span class="metadata-label">By</span>
+                  <span class="metadata-value" id="videoOwner"></span>
+                </div>
+                <div class="metadata-row">
+                  <span class="metadata-label">Quality</span>
+                  <span class="metadata-value" id="videoResolution"></span>
+                </div>
+              </div>
+              <div class="video-description" id="videoDescription"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="qualitySection" class="quality-section hidden">
+          <label for="qualitySelect">Choose Quality:</label>
+          <select id="qualitySelect" class="quality-select">
+            <option value="">Loading qualities...</option>
+          </select>
+        </div>
+
+        <button id="downloadBtn" class="download-btn" disabled>
+          <span class="btn-text">Download Video</span>
+          <span class="btn-icon">&darr;</span>
+        </button>
+
+        <div id="progress" class="progress-container hidden">
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <div class="progress-info">
+            <span id="progressText">0%</span>
+            <span id="progressSpeed"></span>
+          </div>
+          <button id="cancelBtn" class="cancel-btn">
+            <span class="btn-text">Cancel Download</span>
+            <span class="btn-icon">&#x2715;</span>
+          </button>
+        </div>
+
+      <div id="error" class="error hidden"></div>
+      </div>
+
+      <div id="updateNotice" class="update-notice hidden" role="status" aria-live="polite">
+        <div id="updateNoticeText" class="update-notice-text"></div>
+        <div class="update-notice-actions">
+          <a
+            id="updateNoticeLink"
+            class="update-notice-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            >View update</a
+          >
+          <button id="updateNoticeDismiss" class="update-notice-dismiss" type="button">
+            Dismiss
+          </button>
+        </div>
+      </div>
+
+      <div class="footer">
+        <!-- <button id="settingsBtn" class="settings-btn" title="Settings">
+          &#x2699;
+        </button> -->
+      </div>
+    </div>
+
+    <script type="module" src="auth.js"></script>
+    <script defer src="popup-enhanced.js"></script>
+    <script defer src="auth-ui.js"></script>
+    <script defer src="trial-banner.js"></script>
+</body>
+</html>
+
+
+
