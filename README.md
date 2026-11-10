@@ -1,168 +1,178 @@
-# Vimeo Video Downloader  (Browser Extension)
+# Vimeo Video Downloader (Browser Extension) | How to Download Private Vimeo Videos
 
-> Browser extension that makes it simple to save Vimeo videos directly to your computer — in their original quality — for offline access anytime. Public, embedded, and private videos, from 240p up to 4K UHD.
+> Browser extension that downloads Vimeo videos as MP4, including private, unlisted, password-protected and embedded videos you have access to, in the qualities Vimeo provides.
 
-SERP Vimeo Video Downloader is a browser extension built specifically for saving Vimeo videos as standard files you can keep — no re-encoding, no watermarks, and no unnecessary tracking.
+Vimeo Video Downloader is a browser extension for saving Vimeo videos to your computer. It works on vimeo.com, on Vimeo players embedded in other websites, on unlisted links and on password-protected videos when you enter the password, so you can keep lectures, client reviews and training videos offline.
 
-- Save Vimeo videos in their original quality for offline viewing — lectures, tutorials, portfolios, or anything else you need access to
-- Download public, embedded, and private (authenticated) Vimeo videos from 240p up to 4K UHD
-- Skip unreliable online converters and shady download sites — this extension works right inside your browser with one-click downloads
-- Privacy-first design with minimal permissions, no analytics, no telemetry, and no data sharing
+- Download private, unlisted and password-protected Vimeo videos you have access to
+- Save Vimeo players embedded on course sites, portals and portfolios
+- Choose from every quality Vimeo provides for the video (up to 4K when the source has it)
+- Separate audio and video streams are merged into one MP4
+- Run up to 3 downloads at once with progress for each
 
 ![Vimeo Video Downloader extension](https://github.com/user-attachments/assets/884674e0-dfcb-4dc1-a0d3-fa29df51d55e)
-
-Unlike generic tools that fail on Vimeo's streaming format, this extension auto-detects videos on any Vimeo page and provides a clean, one-click download experience.
-
-## watch the video 👇
 
 <a href="https://www.youtube.com/watch?v=NV_g1ijqxLA" target="_blank">
 <img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/download-vimeo-videos-private-or-public-with-browser-extension-chrome-firefox-edge-opera.jpg" width="700px">
 </a>
 
-## 🔗 Links
+## Links
 
-- 🎁 Get it [**here**](https://serp.ly/vimeo-video-downloader?via=github)
-- ❓ Check FAQs [**here**](https://github.com/orgs/serpapps/discussions/categories/faq)
-- 🐛 Report bugs [**here**](https://github.com/serpapps/vimeo-video-downloader/issues)
-- 🆕 Request features [**here**](https://github.com/serpapps/vimeo-video-downloader/issues)
-- 📦 Latest release [**here**](https://github.com/serpapps/vimeo-video-downloader/releases)
-- 🔒 View [**Permissions Justification**](PERMISSIONS.md)
-- 📖 Installation instructions [**here**](https://github.com/serpapps/vimeo-video-downloader/blob/main/INSTALL-SETUP.md)
-
-## Resources
-
-- 💬 [**Community**](https://serp.ly/@serp/community?via=github)
-- 💌 [**Newsletter**](https://serp.ly/@serp/email?via=github)
-- 🛒 [**Shop**](https://serp.ly/@serp/store?via=github)
-- 🎓 [**Courses**](https://serp.ly/@serp/courses?via=github)
+- :rocket: Get it here: [Vimeo Video Downloader](https://serp.ly/vimeo-video-downloader?via=github)
+- :new: Latest release: [GitHub Releases](https://github.com/serpapps/vimeo-video-downloader/releases/latest)
+- :question: Help center: [SERP Help](https://help.serp.co/en/)
+- :beetle: Report bugs: [GitHub Issues](https://github.com/serpapps/vimeo-video-downloader/issues)
+- :bulb: Request features: [Feature Requests](https://github.com/serpapps/vimeo-video-downloader/issues)
 
 ## Why Vimeo Video Downloader
 
-Vimeo delivers video through adaptive streaming (HLS/DASH) that prevents right-click saving. Direct video file URLs are never exposed on the page, and private or embedded videos add authentication layers that block generic download tools entirely. Even password-protected videos and domain-restricted embeds require specific handling that standard browser extensions cannot provide.
+Vimeo streams video in adaptive pieces (HLS/DASH), often with audio and video delivered separately,
+so there is no file to right-click and save. Private, unlisted and password-protected videos add access
+checks, and embedded players on other websites hide the Vimeo page entirely. Online "Vimeo downloader"
+websites cannot see videos that need your login or a password.
 
-This extension was engineered from the ground up for Vimeo. It detects videos automatically on any Vimeo page — including embedded players, showcases, channels, and private links — extracts all available quality options, and saves them directly to your computer. No re-encoding, no quality loss, no external software.
+Vimeo Video Downloader runs inside your browser with your own Vimeo session. It reads the qualities the
+player offers, downloads the pieces, merges audio and video and saves a single MP4.
 
 ## Features
 
-- **Auto-detect videos** — Finds videos on any Vimeo page automatically, including embedded players and showcases
-- **Original quality preserved** — Downloads from 240p up to 4K UHD depending on source video, with no re-encoding or quality loss
-- **Public, embedded & private video support** — Works with public videos, embedded players, and private (authenticated) Vimeo videos
-- **Thumbnail preview & metadata** — Shows video thumbnail and metadata before you download
-- **Fast & reliable** — Files are saved directly without re-processing or waiting in queues
-- **Download progress bar** — Track your download progress in real time
-- **Privacy-first design** — No analytics, no telemetry, no data sharing. Only minimal permissions needed.
-- **Zero ads** — Clean interface with no advertisements
-- **Regular updates** — Community-supported with ongoing updates and bug fixes
-- **Cross-browser support** — Works on Chrome, Edge, Brave, Opera, and Firefox
+- **Private and unlisted videos**: works with videos your Vimeo account can view and with unlisted links (the `?h=` hash)
+- **Password-protected videos**: enter the same password the Vimeo player asks for, then download
+- **Embedded players**: detects Vimeo players embedded on third-party sites, course platforms and portals
+- **Showcases**: open a showcase you have access to and download its videos one by one
+- **Quality selection**: lists every quality Vimeo provides, from 360p up to 4K when available
+- **Audio + video merge**: adaptive streams with separate audio are merged into one MP4
+- **Download queue**: up to 3 downloads at once, each with its own progress bar
+- **Private by design**: detection, merging and saving run in your browser; your videos never pass through our servers
 
-## How It Works
+## Supported Browsers
 
-1. **Install** — Add SERP Vimeo Video Downloader to your browser from the [product page](https://serp.ly/vimeo-video-downloader?via=github), or download the latest version from [GitHub Releases](https://github.com/serpapps/vimeo-video-downloader/releases) and load it manually
-2. **Browse Vimeo** — Navigate to any Vimeo page — public video, embedded player, showcase, channel, or private link
-3. **Pick your quality** — Click the extension icon. It shows all available resolutions from the source video with thumbnail preview
-4. **Save** — Click Download and the video saves directly to your computer in its original quality
+| Browser | Supported |
+|---|---|
+| Google Chrome | ✅ |
+| Microsoft Edge | ✅ |
+| Brave | ✅ |
+| Opera | ✅ |
+| Naver Whale | ✅ |
+| Yandex Browser | ✅ |
+| Firefox, Safari, mobile browsers | ❌ Not supported |
+
+Works on Windows, macOS and Linux desktops. Every release ships one ZIP per browser
+(for example `vimeo-downloader-chrome.zip`).
+
+## How to Download Vimeo Videos (Including Private Videos) (Step-by-Step)
+
+1. Install the extension (see [Installation Instructions](#installation-instructions)) and sign in with your email.
+2. Open the Vimeo video: a vimeo.com page, an unlisted link, a showcase, or a page with an embedded Vimeo player. For private videos, sign in to the Vimeo account that can view it.
+3. Click the extension icon. If the video is password-protected, enter the password.
+4. Choose a quality and click **Download**. The MP4 is saved to your Downloads folder.
+
+**Tip:** if an embedded video is not detected, press play once so the player loads, then click the extension again.
 
 ## Supported Formats
 
-- **Video output:** Original format preserved (MP4, no re-encoding)
-- **Quality range:** 240p, 360p, 480p, 720p, 1080p, 1440p, up to 4K UHD depending on source
-- **Video types:** Public videos, embedded players, showcases, channels, groups, and private (authenticated) videos
-
-## Step-by-Step Tutorial: How to Download Vimeo Videos
-
-Downloading from Vimeo is tricky because the platform uses adaptive streaming and does not expose direct file URLs. Private and embedded videos add authentication layers that block standard tools. This extension handles all of that automatically.
-
-**What you need:** A supported browser — Chrome, Edge, Brave, Firefox, or Opera — and an internet connection. For private videos, you need to be logged in to a Vimeo account with access.
-
-**Step 1 — Install the extension.** Download the latest `.zip` file from [GitHub Releases](https://github.com/serpapps/vimeo-video-downloader/releases). Extract the ZIP file, open Chrome and go to `chrome://extensions/`, enable "Developer mode" (top right toggle), click "Load unpacked" (top left button) and select the extracted folder. See full [installation instructions](https://github.com/serpapps/vimeo-video-downloader/blob/main/INSTALL-SETUP.md) for other browsers.
-
-**Step 2 — Activate your license.** Click the extension icon for the first time and enter your email and license key associated with the extension. You can find your license key in your email confirmation from purchasing.
-
-**Step 3 — Find your video.** Navigate to any Vimeo page — it works on standard video pages, embedded players on third-party sites, showcases, channels, and private links. The extension auto-detects the video.
-
-**Step 4 — Download.** Click the extension icon, preview the thumbnail and metadata, select your preferred quality from all available resolutions, and hit Download. The file saves directly to your computer in its original quality.
-
-**Tips:** For the best quality, select the highest resolution available. The extension preserves original quality with no re-encoding. For private videos, make sure you are logged in to Vimeo with an account that has access. Desktop notifications alert you when downloads complete.
-
-**Troubleshooting:** If a video is not detected, refresh the page and try again. For embedded videos on third-party sites, make sure the extension is enabled. Check that Developer mode is still on in your browser's extension settings. For private videos, verify you are logged in with the correct Vimeo account.
+- **Output:** MP4
+- **Sources:** HLS and DASH streams, including separate audio tracks (merged automatically)
+- **Quality:** every rendition Vimeo provides, from 360p up to 4K when the source has it
+- **Not saved:** captions and subtitles (download them from Vimeo separately)
 
 ## Who It's For
 
-- 🎓 **Students & educators** — Save lecture replays or course videos before they expire
-- 🎥 **Content creators** — Back up portfolios, demo reels, or client projects
-- 🧑‍💼 **Professionals** — Keep access to training, onboarding, or event recordings
-- 📚 **Researchers & archivists** — Organize video libraries with meaningful filenames
-- 🌍 **Everyday users** — Enjoy your favorite videos offline while traveling or on slow connections
+- **Students** saving course lectures hosted on Vimeo
+- **Creators and agencies** backing up their own Vimeo library or client review videos
+- **Teams** keeping training and onboarding videos available offline
 
-## Solving These Problems
+## Troubleshooting
 
-- Paid courses disappear before you finish them
-- Videos buffer, freeze or fail on slow internet
-- Private video links expire without warning
-- Need to rewatch videos offline but there is no download button
-- Platforms that do not let you organize lessons
-- Courses with good content but terrible video naming
+**The video is not detected**  
+Refresh the page and press play once, then open the extension again.
 
-## Common Use Cases
+**A private video fails**  
+Make sure you are signed in to the Vimeo account that can view the video, in the same browser profile.
 
-- Save lecture recordings and course videos for offline study before they expire or get taken down
-- Back up your own Vimeo portfolio, demo reels, or client project videos
-- Download training, onboarding, or event recordings for offline access
-- Save embedded Vimeo videos from third-party sites and learning platforms
-- Archive private Vimeo videos you have access to before links expire
-- Watch downloaded videos offline while traveling or on slow connections
+**A password-protected video fails**  
+Enter the exact password the Vimeo player asks for in the extension popup.
 
-## What Makes Vimeo Video Downloader Different
+## Free Trial & Pricing
 
-Generic downloaders fail on Vimeo because the platform uses adaptive streaming (HLS/DASH) with authentication layers that block standard download approaches. This extension handles all of that natively.
+You get **3 free downloads a week** with no credit card. A **subscription** gives unlimited downloads, with updates included.
 
-- **Original quality** — No re-encoding, no watermarks, no quality loss. Files are saved exactly as the source provides them.
-- **Private video support** — Works with authenticated, password-protected, and domain-restricted Vimeo videos
-- **Embedded player support** — Detects videos in embedded Vimeo players on third-party sites, not just on Vimeo itself
-- **All quality levels** — From 240p up to 4K UHD, every resolution the source video provides is available
-- **Privacy-first** — No analytics, no telemetry, no data sharing. Minimal permissions, fully transparent.
-- **No external software** — Everything runs inside your browser. No desktop apps, no command line, no third-party websites.
-- **Lightweight & transparent** — Open source, minimal permissions, and no hidden data collection
+- Sign in with your email and a one-time code; no password to create.
+- Your free downloads reset every week. In current versions only finished downloads count; a failed or cancelled download does not use one.
+- See current plans on the [product page](https://serp.ly/vimeo-video-downloader?via=github).
 
-## Permissions & Privacy
+## Installation Instructions
 
-We believe in transparency and minimal permissions. Our extension only requests the permissions absolutely necessary for core functionality:
+1. Download the ZIP for your browser from the [latest release](https://github.com/serpapps/vimeo-video-downloader/releases/latest) (for example `vimeo-downloader-chrome.zip`).
+2. Unzip it. You get a folder that contains `manifest.json`.
+3. Open your browser's extensions page: `chrome://extensions` (Chrome), `edge://extensions` (Edge), `brave://extensions` (Brave), `opera://extensions` (Opera), `whale://extensions` (Whale) or `browser://extensions` (Yandex).
+4. Turn on **Developer mode**.
+5. Click **Load unpacked** and select the unzipped folder.
+6. Pin the extension, click its icon, and sign in with your email and the one-time code we send you.
 
-- **Privacy First**: No data tracking, no analytics, no personal information collection
-- **Minimal Permissions**: Only 12 permissions required, each with clear justification
-- **Local Storage**: Your preferences and download history stay on your device
-- **Transparent**: Full documentation of why each permission is needed
+Prefer a guided setup? The [product page](https://serp.ly/vimeo-video-downloader?via=github) walks you through the same steps.
+When a newer version is published, the extension shows an update notice; download the new ZIP from
+[GitHub Releases](https://github.com/serpapps/vimeo-video-downloader/releases/latest) and load it the same way.
 
-**📋 [View detailed permission justifications](PERMISSIONS.md)** — See exactly why each permission is required and how it's used.
+## FAQ
 
-Our commitment: We only access what we need to download your videos, nothing more.
+### How do I download private Vimeo videos?
 
-### Permission Details
+Sign in to the Vimeo account that can view the video, open it, click the extension icon, choose a quality and click **Download**. The extension uses your own session and never bypasses Vimeo's permissions.
 
-- **downloads** — Required to programmatically initiate and manage video file downloads to your computer
-- **activeTab** — Needed to access and analyze the currently active Vimeo tab to detect video content and extract metadata
-- **storage** — Used to persist user preferences, download history, and activation status across browser sessions
-- **scripting** — Required to inject content scripts into Vimeo pages for video detection and data extraction
-- **offscreen** — Used to create offscreen documents for complex video processing tasks (HLS parsing, format conversion)
-- **cookies** — Needed to access Vimeo authentication cookies for downloading private or password-protected videos
-- **host_permissions** — Grants access to Vimeo domains and associated CDN services to extract video streams and handle authentication
+### How do I download a password-protected Vimeo video?
 
-## Trial & Pricing
+Open the video, click the extension icon, enter the same password you use in the Vimeo player, choose your quality and let the download finish. The MP4 saves automatically.
 
-Purchase a license key to get started. For pricing and license details, visit the [product page](https://serp.ly/vimeo-video-downloader?via=github).
+### Can I download unlisted Vimeo videos?
 
-[![Purchase a License Key](https://img.shields.io/badge/Purchase%20a%20License%20Key-brightgreen?style=for-the-badge&logo=buymeacoffee&logoColor=white)](https://serp.ly/vimeo-video-downloader?via=github)
+Yes. Open the unlisted link (it contains a hash such as `?h=...`) and use the extension as usual.
 
-- Works on Chrome, Edge, Brave, Opera, and Firefox
-- All processing happens locally in your browser
-- No analytics, no telemetry, no data sharing
-- Regular updates and community support
+### How do I download an embedded Vimeo video from another website?
 
-## Screenshots
+Open the page that contains the Vimeo player, press play, then click the extension icon. Embedded players on course platforms, portals and portfolio sites are detected the same way as on vimeo.com.
 
-<br>
+### What quality can I download?
 
-![vimeo-video-downloader-screenshot1](https://github.com/user-attachments/assets/884674e0-dfcb-4dc1-a0d3-fa29df51d55e)
+Every quality variant Vimeo provides for the video, from 360p up to 4K when the source has it.
+
+### Does it handle videos with separate audio?
+
+Yes. When Vimeo delivers video and audio as separate streams, the extension downloads both and merges them into a single MP4.
+
+### How many videos can I download at once?
+
+Up to three at the same time, each with its own progress bar.
+
+### Can I download from Vimeo showcases?
+
+Yes. Open a showcase you have access to and the extension detects each video so you can download them individually.
+
+### Will captions or subtitles download too?
+
+No. The extension saves video and audio. Download caption files from Vimeo separately if you need them.
+
+### Does it work on Firefox or Safari?
+
+No. Builds are available for Chrome, Edge, Brave, Opera, Whale and Yandex on Windows, macOS and Linux.
+
+### Do I need a license key?
+
+No. Older versions used license keys. Current versions use email sign-in with a one-time code. You get **3 free downloads a week** with no credit card. A **subscription** gives unlimited downloads, with updates included.
+
+## Videos
+
+<a href="https://www.youtube.com/watch?v=NV_g1ijqxLA" target="_blank">
+<img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/how-to-download-vimeo-videos-for-free-mac-windows-no-extensionstools-needed-mac-version.jpg" width="700px">
+</a>
+
+<br><br>
+
+<a href="https://www.youtube.com/watch?v=NV_g1ijqxLA" target="_blank">
+<img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/how-to-download-vimeo-videos-for-free-mac-windows-no-extensionstools-needed-windows-version.jpg" width="700px">
+</a>
+
+### Screenshots
 
 ![vimeo-video-downloader-screenshot2](https://github.com/user-attachments/assets/8a317739-816a-446f-95d2-bd8b5aec63cc)
 
@@ -172,90 +182,29 @@ Purchase a license key to get started. For pricing and license details, visit th
 
 ![vimeo-video-downloader-screenshot5](https://github.com/user-attachments/assets/fd7c71a8-7ec1-44f3-9522-c214f3667dc9)
 
-## Installation Instructions
+## Notes
 
-
-1. "Star ⭐" this repository - aka click the button that looks like this ![star](https://github.com/user-attachments/assets/5f2a53a9-b426-4879-bc56-2115f2d67df9)
-2. Download the latest `.zip` file from [![Download Now](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge&logo=github)](https://github.com/serpapps/vimeo-video-downloader/releases)
-3. Extract the ZIP file (aka double click it)
-4. Open Chrome and go to `chrome://extensions/`
-5. Enable "Developer mode" (top right toggle)
-6. Click "Load unpacked" (top left button) and select the extracted folder
-7. When you click on the extension for the first time, you will need to enter your `email` & `license key` associated with the extension
-
-> Note: You can find your license key in your email confirmation from purchasing the product
-
-## FAQ
-
-### Q: What quality options are available?
-
-The extension detects all available qualities from the source — from 240p up to 4K UHD depending on what the video provides. Original quality is preserved with no re-encoding.
-
-### Q: Does this work with private Vimeo videos?
-
-Yes. The extension supports public videos, embedded players, and private (authenticated) Vimeo videos. For private videos, you need to be logged in to a Vimeo account with access.
-
-### Q: Does this work with embedded Vimeo videos on other sites?
-
-Yes. The extension detects Vimeo videos in embedded players on third-party sites, not just on Vimeo itself.
-
-### Q: Does this work on Firefox?
-
-Yes — supports Chrome, Edge, Brave, Opera, and Firefox.
-
-### Q: Is my data safe?
-
-Yes. The extension has a privacy-first design with no analytics, no telemetry, and no data sharing. Only minimal permissions are required, and all preferences are stored locally on your device. See the full [permissions justification](PERMISSIONS.md).
-
-### Q: Why isn't the extension detecting my video?
-
-Refresh the page and try again. For embedded videos, make sure the extension is enabled. For private videos, verify you are logged in with the correct Vimeo account. Check that Developer mode is still on in your browser's extension settings.
-
-## Important Notes
-
-This extension is intended for downloading content you own or have permission to save. Users are responsible for ensuring they have the right to download any content. Respect copyright and intellectual property rights. Quality options depend on what the source video provides. An active internet connection is required during the download process.
-
-## Keywords
-
-`vimeo downloader` `vimeo video downloader` `download vimeo` `vimeo mp4` `vimeo browser extension` `save vimeo videos` `vimeo private video downloader` `vimeo 4k downloader`
+- Only download content you own or have permission to save.
+- The extension works with videos your own account can already watch in the browser. It does not unlock paid, private or locked content.
+- Quality depends on what the source player serves; the extension cannot make a video sharper than the original.
+- Site updates can affect detection. If something stops working, [open an issue](https://github.com/serpapps/vimeo-video-downloader/issues) and include the page type (not private links).
 
 ## License
 
 This repository is distributed under the proprietary SERP Apps license in the [LICENSE](LICENSE) file. Review that file before copying, modifying, or redistributing any part of this project.
 
-## Get It
-
-- **Start here:** [SERP Vimeo Video Downloader](https://serp.ly/vimeo-video-downloader?via=github)
-
----
-
-## More Ways to Download Vimeo Videos
-
-### How to Download Vimeo Videos for Free — Mac Version
-
-<a href="https://www.youtube.com/watch?v=NV_g1ijqxLA" target="_blank">
-<img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/how-to-download-vimeo-videos-for-free-mac-windows-no-extensionstools-needed-mac-version.jpg" width="700px">
-</a>
-
-### How to Download Vimeo Videos for Free — Windows Version
-
-<a href="https://www.youtube.com/watch?v=NV_g1ijqxLA" target="_blank">
-<img src="https://raw.githubusercontent.com/devinschumacher/uploads/refs/heads/main/images/how-to-download-vimeo-videos-for-free-mac-windows-no-extensionstools-needed-windows-version.jpg" width="700px">
-</a>
-
----
-
-<details>
-
-<summary>Vimeo R&D</summary>
-
 ## Related
 
-- https://github.com/serpapps/vimeo-video-downloader
+- [How to Download Password Protected Vimeo Videos](https://gist.github.com/devinschumacher/d28b419be2b349b9730dee1137b292da)
 - https://gist.github.com/devinschumacher/a189434fc9f374965888ca2dc793953e
 - https://gist.github.com/devinschumacher/8024bc4693d79aef641b2c281e45d6cb
-- [How to Download Password Protected Vimeo Videos](https://gist.github.com/devinschumacher/d28b419be2b349b9730dee1137b292da)
 - https://gist.github.com/devinschumacher/8095f410a01494bc04ebf6c6440ce25d
-rights.
+- [Loom Video Downloader](https://github.com/serpapps/loom-video-downloader)
+- [SproutVideo Downloader](https://github.com/serpapps/sprout-video-downloader)
 
-</details>
+## About Vimeo
+
+Vimeo is a video hosting platform used by creators, businesses and course platforms. Many online
+courses and private portals embed Vimeo players, and many videos are private, unlisted or
+password-protected, which is why the standard Vimeo download button is often missing. Vimeo Video
+Downloader saves the videos you are allowed to watch.
